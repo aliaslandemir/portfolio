@@ -11553,14 +11553,14 @@ pre .code {
 
 @media (max-width: 767.98px) {
   .header {
-    height: 500px;
-    min-height: 500px;
+    height: 300px;
+    min-height: 300px;
   }
   .header .social-icons {
     margin: auto;
   }
   .header .header-content {
-    padding: 20px;
+    padding: 10px;
   }
   .header .header-content .header-mono {
     letter-spacing: 2px;
@@ -11600,7 +11600,7 @@ pre .code {
 }
 
 .section {
-  padding: 80px 0;
+  padding: 6cm 0;
 }
 
 .section.bg-custom-gray {
