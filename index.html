@@ -7,262 +7,201 @@
     <title>Ali Aslan Demir | Portfolio</title>
     <!-- font icons -->
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
-    <!-- Bootstrap and main styles -->
-    <link rel="stylesheet" href="assets/css/johndoe.css">
+    <!-- Main CSS file -->
+    <link rel="stylesheet" href="assets/css/aad.css">
     <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            font-family: Arial, sans-serif;
-        }
-        .container, .container-fluid {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .section {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 40px 20px; /* Adjust padding for more space */
-        }
-        .header {
-            text-align: center;
-            padding-top: 60px;
-        }
-        header .header-content {
-            margin-bottom: 40px;
-        }
-        nav.navbar {
-            width: 100%;
-        }
-        .resume-card {
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-        .resume-card-header {
-            margin-bottom: 10px;
-        }
-        .resume-card-body p {
-            margin-bottom: 5px;
-        }
-        .line {
-            width: 60px;
-            height: 3px;
-            background-color: #333;
-            margin-bottom: 10px;
-        }
-        /* Fix for Hobbies and similar sections */
-        .section-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            margin-top: 20px;
-        }
-        .section-content p {
-            margin: 10px 0; /* Add spacing between lines */
-        }
-        /* Add styles for the photo */
-        .who-am-i-photo {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-        }
+        /* Add styles for this document inline if necessary */
     </style>
 </head>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="20" id="home">
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <h4 class="header-subtitle">Welcome, I'm</h4>
-                <h1 class="header-title">Ali Aslan Demir</h1>
-                <p>PhD Candidate in Biophysics and Biomineralization</p>
-            </div>
+<header class="header">
+    <div class="container">
+        <div class="header-content">
+            <h4 class="header-subtitle">Welcome, I'm</h4>
+            <h1 class="header-title">Ali Aslan Demir</h1>
         </div>
-    </header>
+    </div>
+</header>
 
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white" data-spy="affix" data-offset-top="150">
-        <div class="container">
-            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a href="#home" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#about" class="nav-link">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#resume" class="nav-link">Resume</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#slides" class="nav-link">Slides</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a href="#hobbies" class="nav-link">Hobbies</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#challenges" class="nav-link">Challenges</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#animeworld" class="nav-link">AnimeWorld</a>
-                    </li>
-                    <li class="nav-item last-item">
-                        <a href="#contact" class="nav-link">Contact</a>
-                    </li>
-                </ul>
-            </div>
+<nav class="navbar sticky-top navbar-expand-lg">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a href="#home" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+            <a href="#about" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+            <a href="#resume" class="nav-link">Resume</a>
+        </li>
+        <li class="nav-item">
+            <a href="#slides" class="nav-link">Slides</a>
+        </li>
+        <li class="nav-item">
+            <a href="#hobbies-challenges" class="nav-link">Hobbies & Challenges</a>
+        </li>
+        <li class="nav-item">
+            <a href="#animeworld" class="nav-link">AnimeWorld</a>
+        </li>
+        <li class="nav-item last-item">
+            <a href="#contact" class="nav-link">Contact</a>
+        </li>
+    </ul>
+</nav>
+
+
+    <!-- About Section -->
+    <div id="about" class="about-section">
+        <!-- Who am I Card -->
+        <div class="about-card">
+            <h3>Who am I?</h3>
+            <img src="assets/imgs/picture.png" alt="Ali Aslan Demir">
+            <p>I am a PhD candidate in Biophysics and Biomineralization at the University of Oslo. My research focuses on stem cell differentiation, bone formation in hydrogels, and microfluidic technologies. I also research cell behavior on micropatterned substrates. I am passionate about microscopy, data analysis, and their applications in personalized medicine.</p>
         </div>
-    </nav>
-
-    <div class="container-fluid">
-        <div id="about" class="row about-section">
-            <div class="col-lg-4 about-card">
-                <h3 class="font-weight-light">Who am I?</h3>
-                <span class="line mb-5"></span>
-                <!-- Add this wrapper div to center the image -->
-                <div style="text-align: center;">
-                    <img src="assets/imgs/picture.png" alt="Ali Aslan Demir" class="who-am-i-photo">
-                </div>
-                <p>I am a PhD candidate in Biophysics and Biomineralization at the University of Oslo. My research focuses on stem cell differentiation, bone formation in hydrogels, and microfluidic technologies. I am passionate about microscopy, data analysis, and their applications in personalized medicine.</p>
-            </div>            
-            <div class="col-lg-4 about-card">
-                <h3 class="font-weight-light">Contact Information</h3>
-                <span class="line mb-5"></span>
-                <ul class="mt40 info list-unstyled">
-                    <li><strong>Email</strong>: aliaslandemir@gmail.com</li>
-                    <li><strong>Address</strong>: Blindern, Oslo</li>
-                </ul>
-                <ul class="social-icons pt-3">
-                    <li class="social-item"><a class="social-link" href="#"><i class="ti-github" aria-hidden="true"></i></a></li>
-                    <li class="social-item"><a class="social-link" href="#"><i class="ti-linkedin" aria-hidden="true"></i></a></li>
-                </ul>
-            </div>
-            <div class="col-lg-4 about-card">
-                <h3 class="font-weight-light">Areas of Interest</h3>
-                <span class="line mb-5"></span>
-                <p><strong>Biomineralization</strong>: Researching calcium phosphate transformations for bone tissue engineering.</p>
-                <p><strong>Biophysics</strong>: Understanding how mechanical forces and biological interactions influence cellular behavior.</p>
-                <p><strong>Organ-on-a-chip</strong>: Developing systems to mimic cellular environments for tissue engineering research.</p>
-                <p><strong>Deep Learning</strong>: Applying AI models for automated image analysis and data classification.</p>
-            </div>
+        
+    
+        <!-- Areas of Interest Card -->
+        <div class="about-card">
+            <h3>Areas of Interest</h3>
+            <p><strong>Biomineralization:</strong> Researching calcium phosphate transformations for bone tissue engineering.</p>
+            <p><strong>Biophysics:</strong> Understanding how mechanical forces and biological interactions influence cellular behavior.</p>
+            <p><strong>Organ-on-a-chip:</strong> Developing systems to mimic cellular environments for tissue engineering research.</p>
+            <p><strong>Deep Learning:</strong> Applying AI models for automated image analysis and data classification.</p>
         </div>
     </div>
 
-    <section id="resume">
-        <div class="resume-container">
-            <!-- Centered Resume Title -->
-            <h2 class="mb-5"><span class="text-danger">My</span> Resume</h2>
-            
-            <!-- Resume Cards in a Row -->
-            <div class="resume-cards">
-                <!-- Education Section -->
-                <div class="resume-card">
-                    <header class="resume-card-header">
-                        <h4>Education</h4>
-                    </header>
-                    <div class="resume-card-body">
-                        <ul class="resume-list">
-                            <li><strong>PhD in Biophysics</strong> - University of Oslo (Aug 2022 - Present)</li>
-                            <li><strong>MS in Photonics Science and Engineering</strong> - Izmir Institute of Technology (Sep 2018 - Jun 2021)</li>
-                            <li><strong>BS in Physics</strong> - Middle East Technical University (Sep 2012 - Jun 2018)</li>
-                        </ul>
-                    </div>
+
+    <!-- Resume Section -->
+
+<section id="resume">
+    <div class="resume-container">
+        <h2 class="mb-5"><span class="text-danger">My</span> Resume</h2>
+
+        <div class="resume-cards">
+            <!-- Education Section -->
+            <div class="resume-card">
+                <header class="resume-card-header">
+                    <h4>Education</h4>
+                </header>
+                <div class="resume-card-body">
+                    <ul class="resume-list">
+                        <p><strong>PhD in Biophysics:</strong> University of Oslo / NO (Aug 2022 - Present)</p>
+                        <p><strong>MS in Photonics Science and Engineering:</strong> Izmir Institute of Technology / TR (Sep 2018 - Jun 2021)</p>
+                        <p><strong>BS in Physics:</strong> Middle East Technical University / TR (Sep 2012 - Jun 2018)</p>
+                    </ul>
                 </div>
-                
-                <!-- Research and Expertise Section -->
-                <div class="resume-card">
-                    <header class="resume-card-header">
-                        <h4>Research & Expertise</h4>
-                    </header>
-                    <div class="resume-card-body">
-                        <ul class="resume-list">
-                            <li>Specialized in Biophysics and Biomineralization for tissue engineering</li>
-                            <li>Expertise in calcium phosphate transformations and regenerative medicine</li>
-                            <li>Experienced in microfluidic chip design and fabrication</li>
-                            <li>Proficient in optics, deep learning, and image analysis for biological data</li>
-                            <li>Developed deep learning models for automated cell classification</li>
-                            <li>Skilled in lab automation, safety compliance, and collaboration with industry</li>
-                        </ul>
-                    </div>
+            </div>
+
+            <!-- Research & Expertise Section (Wider) -->
+            <div class="resume-card resume-card-research">
+                <header class="resume-card-header">
+                    <h4>Research & Expertise</h4>
+                </header>
+                <div class="resume-card-body">
+                    <ul class="resume-list">
+                        <li><strong>PhD Candidate | Biophysics and Biomineralization</strong> - University of Oslo (Aug 2022 - Present)
+                            <ul role="list">
+                                <li>Modeling of biomineralization to understand factors affecting bone regeneration</li>
+                                <li>Experimental investigation of calcium phosphate biomineralization and interaction of bone/stem cells with the extracellular matrix</li>
+                                <li>Developing and maintaining automation protocols and ensuring lab safety compliance</li>
+                            </ul>
+                        </li>
+                        <li><strong>Visiting Researcher</strong> - University of Minnesota (Jul 2024 - Aug 2024)
+                            <ul role="list">
+                                <li>Worked on a Norwegian Centennial Chair (NOCC)-funded project on engineering cell tissue through topological patterning</li>
+                                <li>Designed and microfabricated topological defect patterns for tissue ordering</li>
+                                <li>Investigated HUASMC cell mechanics on fibronectin micropatterns using Traction Force Microscopy and PIV analysis</li>
+                            </ul>
+                        </li>
+                        <li><strong>Research Assistant</strong> - İzmir Institute of Technology (Mar 2020 - Aug 2022)
+                            <ul role="list">
+                                <li>Detection of rare cells using deep learning and lensless holography</li>
+                                <li>Assisted in the Applied Optics and Photonics Laboratory with a focus on diffraction patterns</li>
+                            </ul>
+                        </li>
+                        <li><strong>Erasmus Intern</strong> - Umeå University (Aug 2019 - Oct 2019)
+                            <ul role="list">
+                                <li>Characterization and analysis of bacterial p-pili folding-unfolding using Force Measuring Optical Tweezers</li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
-    
-                <!-- Industry Experience Section -->
-                <div class="resume-card">
-                    <header class="resume-card-header">
-                        <h4>Industry Experience</h4>
-                    </header>
-                    <div class="resume-card-body">
-                        <ul class="resume-list">
-                            <li>Collaborated with INITIO CELL on deep learning-enforced image analysis for organ-on-chip applications</li>
-                            <li>Interned at Omega Electronics A.S., working on LED luminaire design and testing</li>
-                        </ul>
-                    </div>
+            </div>
+
+            <!-- Industry Experience Section -->
+            <div class="resume-card">
+                <header class="resume-card-header">
+                    <h4>Industry Experience</h4>
+                </header>
+                <div class="resume-card-body">
+                    <ul class="resume-list">
+                        <li>Collaborated with INITIO CELL on deep learning-enforced image analysis for organ-on-chip applications and developed a GUI interface for data analysis</li>
+                        <li>Interned at Omega Electronics A.S., working on LED luminaire design and testing</li>
+                    </ul>
                 </div>
-                
-                <!-- Projects Section -->
-                <div class="resume-card">
-                    <header class="resume-card-header">
-                        <h4>Projects</h4>
-                    </header>
-                    <div class="resume-card-body">
-                        <ul class="resume-list">
-                            <li><strong>Bone-on-a-Chip Model</strong>: Developed a microfluidic platform to study calcium phosphate mineralization and stem cell behavior.</li>
-                            <li><strong>Deep Learning for Rare Cell Detection</strong>: Applied deep learning models to detect rare cancer cells using lensless holography techniques.</li>
-                        </ul>
-                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Hobbies and Challenges Section -->
+    <section id="slides" class="section">
+        <h2 class="text-danger">Slides</h2>
+        <div class="slides-container">
+            <!-- Hobbies Column -->
+            <div class="slides-section">
+                <h4>Under Construction!</h4>
+                <div class="section-content">
                 </div>
             </div>
         </div>
     </section>
-    
-    
 
-    <section id="hobbies" class="section">
-        <h2 class="text-danger">Hobbies</h2>
-        <div class="section-content">
-            <p>Running</p>
-            <p>Skiing</p>
-            <p>Cycling</p>
+    <!-- Hobbies and Challenges Section -->
+    <section id="hobbies-challenges" class="section">
+        <h2 class="text-danger">Hobbies & Challenges</h2>
+        <div class="hobbies-challenges-container">
+            <!-- Hobbies Column -->
+            <div class="hobbies-section">
+                <h4>Hobbies</h4>
+                <div class="section-content">
+                    <p>Running</p>
+                    <p>Cross Country Skiing</p>
+                    <p>Cycling</p>
+                </div>
+            </div>
+            <!-- Challenges Column -->
+            <div class="challenges-section">
+                <h4>Challenges</h4>
+                <div class="section-content">
+                    <p>Birkebeinerrennet</p>
+                    <p>Ultra Trail (>60k)</p>
+                    <p>>160k Cycling</p>
+                    <p>>5000m Climbing</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="challenges" class="section">
-        <h2 class="text-danger">Challenges</h2>
-        <div class="section-content">
-            <p>Vasaloppet (Öppet Spår Monday 90) in Feb 26</p>
-            <p>Ultra Trail (>60k) until July</p>
-            <p>Cycle to Lillehammer until September (>160k)</p>
-            <p>Mount Ararat (Agri) in September?</p>
-        </div>
-    </section>
-
+    <!-- Anime World Section -->
     <section id="animeworld" class="section">
         <h2 class="text-danger">My Anime List</h2>
         <div class="img-holder">
-            <img src="assets/imgs/worldcloudaad.png" alt="Anime World Cloud" class="center" width="700" height="700">
+            <img src="assets/imgs/worldcloudaad.png" alt="My Anime List Cloud Image" class="center" width="700" height="700">
         </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact" class="section">
         <h2 class="text-danger">Contact</h2>
-        <p>If you would like to get in touch, please email me at <strong>aliaslandemir@gmail.com</strong>.</p>
+        <div class="contact-content">
+            <p>If you would like to get in touch, please email me at <strong>aliaslandemir@gmail.com</strong>.</p>
+            <div class="img-holder">
+                <img src="assets/imgs/bakarlar.webp" alt="Contact Image" class="contact-image">
+            </div>
+        </div>
     </section>
-
+    
     <!-- Core Scripts -->
     <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
     <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
