@@ -6413,21 +6413,101 @@ a.close.disabled {
   content: none;
 }
 
+
 <style>
-    /* Targeting the carousel items */
-    #resumeCarousel .carousel-item {
-        width: 640px;
-        height: 480px;
-        margin: auto; /* Centering the carousel item */
+    /* Center the Resume title */
+    #resume h2 {
+        font-size: 2em;
+        font-weight: bold;
+        color: #ff5e5e;
+        text-align: center;
+        margin-bottom: 40px;
+        font-family: 'Roboto', sans-serif;
     }
 
-    /* Ensuring the images fit nicely in the carousel item */
-    #resumeCarousel .carousel-item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; /* This makes the image cover the full area without stretching */
+    /* Center the entire resume section */
+    .resume-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Flexbox layout for cards to be side by side */
+    .resume-cards {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px; /* Add spacing between the cards */
+        flex-wrap: wrap; /* Ensure responsiveness on smaller screens */
+        max-width: 1200px; /* Limit the max width to keep things centered */
+        margin: 0 auto; /* Center the whole group */
+    }
+
+    /* Adjust individual cards for equal sizing and spacing */
+    .resume-card {
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Softer shadows */
+        padding: 20px;
+        margin-bottom: 20px;
+        flex: 1; /* Make sure all cards take equal width */
+        min-width: 250px; /* Ensure a minimum width */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        max-width: 300px; /* Limit card width for neat appearance */
+    }
+
+    /* Hover effect for cards */
+    .resume-card:hover {
+        transform: translateY(-5px); /* Lift the card on hover */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow */
+    }
+
+    /* Font and text style for headers */
+    .resume-card-header h4 {
+        color: #333;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-family: 'Roboto', sans-serif;
+        letter-spacing: 1px;
+        font-size: 1.2em; /* Slightly larger font */
+        background: linear-gradient(45deg, #007bff, #00d4ff); /* Gradient background */
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    /* Resume list item styling */
+    .resume-list {
+        list-style-type: none;
+        padding: 0;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .resume-list li {
+        padding: 5px 0;
+        font-size: 15px;
+        line-height: 1.6;
+        color: #333;
+        transition: color 0.3s ease;
+    }
+
+    .resume-list li strong {
+        color: #007bff;
+    }
+
+    /* Hover effect on resume list items */
+    .resume-list li:hover {
+        color: #007bff;
+    }
+
+    /* Adjust the layout for smaller screens */
+    @media (max-width: 768px) {
+        .resume-cards {
+            flex-direction: column; /* Stack cards on smaller screens */
+        }
     }
 </style>
+
+
 
 
 .modal-content {
