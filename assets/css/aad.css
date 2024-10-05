@@ -1,0 +1,349 @@
+/* Importing Google Fonts for a more professional look */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap");
+
+/* Root Variables */
+:root {
+  --primary-color: #4a90e2;
+  --secondary-color: #6c757d;
+  --font-color-dark: #333;
+  --bg-color-light: #f8f9fa;
+  --font-family: "Nunito", sans-serif;
+  --transition-speed: 0.3s ease-in-out;
+  --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  --border-radius: 10px;
+}
+
+/* General Reset and Box Sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-family);
+  background-color: var(--bg-color-light);
+  color: var(--font-color-dark);
+}
+
+
+
+/* Header Section */
+.header {
+  text-align: center;
+  padding: 20px 20px 100px;
+  position: relative; /* Ensure positioning works properly */
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better contrast */
+  z-index: 0;
+}
+
+.header .header-content {
+  position: relative;
+  z-index: 1; /* Ensure content stays above the overlay */
+}
+
+.header .header-title {
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.6); /* Stronger shadow for better visibility */
+  margin-bottom: 10px;
+}
+
+.header .header-subtitle {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8); /* Slightly dimmed for contrast */
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
+
+
+
+/* Updated Navbar Styles */
+nav.navbar {
+  display: flex;
+  justify-content: center; /* Centers the items horizontally */
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar-nav {
+  display: flex;
+  gap: 20px; /* Adds spacing between the items */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ff5e5e;
+}
+
+.navbar-nav .active {
+  color: #ff5e5e;
+}
+
+/* Adjust for mobile */
+@media (max-width: 768px) {
+  .navbar-nav {
+      flex-direction: column;
+      gap: 10px;
+  }
+}
+
+
+/* Page Layout */
+.container, .container-fluid {
+  padding: 15px;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color var(--transition-speed);
+}
+
+a:hover {
+  color: #357ab8;
+}
+
+/* About Section */
+/* Updated About Section Layout */
+.about-section {
+  display: flex;
+  justify-content: space-between; /* This ensures the cards are distributed more closely */
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1px; /* Reduce the gap between the cards */
+  padding: 40px 20px;
+}
+
+.about-card {
+  background-color: var(--bg-color-light);
+  border-radius: var(--border-radius);
+  padding: 10px;
+  max-width: 320px; /* Increase this to make the cards slightly wider */
+  margin: 0 auto; /* Center the cards within the available space */
+  box-shadow: var(--box-shadow);
+  text-align: left;
+}
+
+
+.about-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.about-card h3 {
+  font-size: 1.8rem;
+  color: #3f8dfd;
+  margin-bottom: 20px;
+}
+
+.about-card p, .about-card ul {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+.about-card img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+/* Add responsiveness */
+@media (max-width: 768px) {
+  .about-section {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+
+/* Resume Section */
+/* Resume Cards Grid Layout */
+.resume-cards {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr; /* Sets the middle card (Research & Expertise) to be 2x wider */
+  gap: 30px;
+  padding: 30px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+}
+
+/* Resume Card */
+.resume-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resume-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Wider Research & Expertise Section */
+.resume-card-research {
+  grid-column: span 1.5; /* Spans 2 columns to make it 2x wider */
+}
+
+/* Resume Card Header */
+.resume-card-header h4 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Resume Card Body */
+.resume-card-body ul {
+  padding-left: 20px;
+  text-align: left;
+}
+
+.resume-card-body li {
+  list-style-type: disc;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+/* Section Heading */
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--primary-color);
+}
+
+h2 span {
+  color: #ff5e5e;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .resume-cards {
+      grid-template-columns: 1fr; /* Stack cards in one column on small screens */
+  }
+
+  .resume-card-research {
+      grid-column: span 1; /* Back to normal width on small screens */
+  }
+}
+
+
+/* Hobbies and Challenges Section */
+.hobbies-challenges-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.hobbies-section, .challenges-section {
+  background-color: var(--bg-color-light);
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.hobbies-section:hover, .challenges-section:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hobbies-section h4, .challenges-section h4 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.section-content p {
+  margin: 15px 0;
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+}
+
+.section {
+  padding: 80px 20px; /* Increase vertical spacing between sections */
+  text-align: center;
+}
+
+.section:not(:last-of-type) {
+  margin-bottom: 60px; /* Space between sections */
+}
+
+
+/* AnimeWorld Section */
+.img-holder {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.img-holder img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+}
+
+/* Contact Section */
+#contact {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: var(--border-radius);
+}
+
+#contact h2 {
+  color: var(--primary-color);
+}
+
+#contact p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: var(--secondary-color);
+}
+
+.contact-content {
+  margin-top: 20px;
+}
+
+.contact-image {
+  max-width: 100px; /* Adjust size of the image */
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+
