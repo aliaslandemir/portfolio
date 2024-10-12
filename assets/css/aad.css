@@ -347,3 +347,148 @@ h2 span {
 }
 
 
+
+/* Navigation buttons */
+/* Slide container style */
+.slider-container {
+  width: 70%; /* Adjust width of the slider container */
+  max-width: 800px;
+  margin: 0 auto; /* Center align the slider */
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  position: relative;
+  height: 500px; /* Set a fixed height for consistency */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+}
+
+/* Individual slides */
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Slide style */
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;      /* Center vertically */
+}
+
+/* Image styling */
+.slide img {
+  max-width: 100%; /* Ensures the image doesn't overflow horizontally */
+  max-height: 100%; /* Ensures the image doesn't overflow vertically */
+  object-fit: contain; /* Scales the image while keeping its aspect ratio */
+  display: block;
+  margin: auto; /* Extra centering assurance */
+  border-radius: 10px;
+}
+
+/* Navigation buttons */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.8); /* Dark background for better visibility */
+  color: white;
+  border: none;
+  padding: 15px 25px; /* Longer padding for horizontal shape */
+  cursor: pointer;
+  border-radius: 30px; /* Rounded ends */
+  font-size: 24px; /* Larger font for arrow icon */
+  z-index: 10; /* Ensure buttons are above the slides */
+  transition: background-color 0.3s ease;
+  width: 60px; /* Longer width for a horizontal arrow */
+  height: 60px; /* Fixed height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prev {
+  left: 20px; /* Positioned on the left */
+}
+
+.next {
+  right: 20px; /* Positioned on the right */
+}
+
+/* Button hover effect */
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 1); /* Fully opaque on hover */
+}
+
+/* Arrow shape (using CSS triangles) */
+.prev::before, .next::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.prev::before {
+  border-width: 15px 20px 15px 0;
+  border-color: transparent white transparent transparent;
+  left: 10px;
+}
+
+.next::before {
+  border-width: 15px 0 15px 20px;
+  border-color: transparent transparent transparent white;
+  right: 10px;
+}
+
+
+
+/* Add margin to create space between image and text */
+.img-holder img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 60px; /* Adds vertical space after the image */
+}
+
+/* Funny text animation */
+.funny-text {
+  font-size: 1.2rem;
+  color: #FF5733; /* Fun bright color */
+  text-align: center;
+  animation: bounce 2s infinite ease-in-out, color-change 5s infinite;
+  transform-origin: center;
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* Funny font */
+}
+
+/* Bounce effect */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+  }
+  40% {
+      transform: translateY(-30px);
+  }
+  60% {
+      transform: translateY(-15px);
+  }
+}
+
+/* Color change animation */
+@keyframes color-change {
+  0% {
+      color: #5DADE2;  /* Cool Ice Blue */
+  }
+  25% {
+      color: #2980B9;  /* Deep Blue */
+  }
+  50% {
+      color: #1ABC9C;  /* Cool Mint */
+  }
+  75% {
+      color: #2C3E50;  /* Dark Slate Blue */
+  }
+  100% {
+      color: #5DADE2;  /* Cool Ice Blue */
+  }
+}

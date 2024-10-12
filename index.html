@@ -7,10 +7,64 @@
     <title>Ali Aslan Demir | Portfolio</title>
     <!-- font icons -->
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Main CSS file -->
     <link rel="stylesheet" href="assets/css/aad.css">
     <style>
         /* Add styles for this document inline if necessary */
+
+                /* Slide container style */
+                .slider-container {
+            width: 70%; /* Adjust width of the slider container */
+            max-width: 800px;
+            margin: 0 auto; /* Center align the slider */
+            overflow: hidden;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        /* Individual slides */
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        /* Slide style */
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Scale images to fit in the slide */
+        .slide img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+        }
+
+        /* Navigation buttons */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
     </style>
 </head>
 
@@ -145,21 +199,49 @@
 </section>
 
     <!-- Hobbies and Challenges Section -->
+    <!-- Slides Section -->
     <section id="slides" class="section">
         <h2 class="text-danger">Slides</h2>
-        <div class="slides-container">
-            <!-- Hobbies Column -->
-            <div class="slides-section">
-                <h4>Under Construction!</h4>
-                <div class="section-content">
+        <p>This page was created with the assumption of regular updates to showcase some of my recent activities.</p>
+        <div class="slider-container">
+            <div class="slides">
+                <div class="slide">
+                    <img src="assets/imgs/slide1.png" alt="Slide 1">
                 </div>
+                <div class="slide">
+                    <img src="assets/imgs/slide2.png" alt="Slide 2">
+                </div>
+                <div class="slide">
+                    <img src="assets/imgs/slide3.jpg" alt="Slide 3">
+                </div>
+                <!-- Add more slides as needed -->
             </div>
+
+            <!-- Navigation buttons -->
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
         </div>
     </section>
+
+    <!-- Scripts -->
+    <script>
+        let currentSlide = 0;
+
+        function moveSlide(direction) {
+            const slides = document.querySelector('.slides');
+            const totalSlides = document.querySelectorAll('.slide').length;
+
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+
+            slides.style.transform = `translateX(${-currentSlide * 100}%)`;
+        }
+    </script>
+    
 
     <!-- Hobbies and Challenges Section -->
     <section id="hobbies-challenges" class="section">
         <h2 class="text-danger">Hobbies & Challenges</h2>
+        <p>Below is a list of my active sports activities and things I plan to do in the near future; a personal reminder.</p>
         <div class="hobbies-challenges-container">
             <!-- Hobbies Column -->
             <div class="hobbies-section">
@@ -187,6 +269,7 @@
     <section id="animeworld" class="section">
         <h2 class="text-danger">My Anime List</h2>
         <div class="img-holder">
+            I’ve always been fascinated by the boundless creativity of anime. To escape the more boring parts of life, I sometimes immerse myself in the anime world. The cloud below is a reminder for me, or a suggestion for you to explore.
             <img src="assets/imgs/worldcloudaad.png" alt="My Anime List Cloud Image" class="center" width="700" height="700">
         </div>
     </section>
@@ -195,19 +278,26 @@
     <section id="contact" class="section">
         <h2 class="text-danger">Contact</h2>
         <div class="contact-content">
-            <p>If you would like to get in touch, please email me at <strong>aliaslandemir@gmail.com</strong>.</p>
+            <p>If you would like to get in touch for personal matters, please email me at <strong>aliaslandemir@gmail.com</strong>.</p>
+            <p style="margin-bottom: 50px;"></pstyle>If you would like to get in touch for professional reasons, please email me at <strong>aliadem@uio.no</strong>.</p>
+            <p>The image below is from a real-case advertisement board that remained unchanged around 10 years of my lifetime span—never updated, yet still there, as if it holds hope that someone will eventually look at it/change it.</p>
             <div class="img-holder">
                 <img src="assets/imgs/bakarlar.webp" alt="Contact Image" class="contact-image">
+                <p class="funny-text">
+                    Okay, friends, I’ve been serious enough on the webpage. Life’s really pretty simple—just think about the difference between two moments. Remember your definitive derivative!</p>
             </div>
         </div>
     </section>
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Ali Aslan Demir. All rights are free to copy.</p>
-        </div>
+            <p>&copy; 2024; Ali Aslan Demir.</p>        </div>
     </footer>  
     <!-- Core Scripts -->
+     <!-- Bootstrap JS and dependencies (Popper.js and jQuery) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
