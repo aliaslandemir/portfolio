@@ -492,3 +492,59 @@ h2 span {
       color: #5DADE2;  /* Cool Ice Blue */
   }
 }
+
+
+
+
+                /* Slide container style */
+                .slider-container {
+                  width: 70%; /* Adjust width of the slider container */
+                  height: 500px; /* Ensure a height is specified */
+                  max-width: 800px;
+                  margin: 0 auto; /* Center align the slider */
+                  overflow: hidden;
+                  border: 1px solid #ddd;
+                  border-radius: 10px;
+                  position: relative;
+              }
+      
+              /* Individual slides */
+              .slides {
+                  display: flex;
+                  transition: transform 0.5s ease-in-out;
+              }
+      
+              /* Slide style */
+              .slide {
+                  min-width: 100%;
+                  box-sizing: border-box;
+              }
+      
+              /* Scale images to fit in the slide */
+              .slide img {
+                  width: 100%;
+                  height: auto;
+                  display: block;
+                  border-radius: 10px;
+              }
+      
+              /* Navigation buttons */
+              .prev, .next {
+                  position: absolute;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  background-color: rgba(0, 0, 0, 0.5);
+                  color: white;
+                  border: none;
+                  padding: 10px;
+                  cursor: pointer;
+                  border-radius: 50%;
+              }
+      
+              .prev {
+                  left: 10px;
+              }
+      
+              .next {
+                  right: 10px;
+              }
