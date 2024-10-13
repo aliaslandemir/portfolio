@@ -5,57 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="aad">
     <title>Ali Aslan Demir | Portfolio</title>
-    <!-- font icons -->
+    <!-- External CSS -->
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Main CSS file -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/aad.css">
-    <style>
-        /* Add styles for this document inline if necessary */
-
-
-
-    </style>
 </head>
-
-<header class="header">
-    <div class="container">
-        <div class="header-content">
-            <h4 class="header-subtitle">Welcome, I'm</h4>
-            <h1 class="header-title">Ali Aslan Demir</h1>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h4 class="header-subtitle">Welcome, I'm</h4>
+                <h1 class="header-title">Ali Aslan Demir</h1>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
 
-<nav class="navbar sticky-top navbar-expand-lg">
-    <ul class="navbar-nav">
-        <li class="nav-item">
-            <a href="#home" class="nav-link">Home</a>
-        </li>
-        <li class="nav-item">
-            <a href="#about" class="nav-link">About</a>
-        </li>
-        <li class="nav-item">
-            <a href="#resume" class="nav-link">Resume</a>
-        </li>
-        <li class="nav-item">
-            <a href="#slides" class="nav-link">Slides</a>
-        </li>
-        <li class="nav-item">
-            <a href="#hobbies-challenges" class="nav-link">Hobbies & Challenges</a>
-        </li>
-        <li class="nav-item">
-            <a href="#animeworld" class="nav-link">AnimeWorld</a>
-        </li>
-        <li class="nav-item last-item">
-            <a href="#contact" class="nav-link">Contact</a>
-        </li>
-    </ul>
-</nav>
-
+    <!-- Navigation -->
+    <nav class="navbar sticky-top navbar-expand-lg">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="#resume" class="nav-link">Resume</a></li>
+            <li class="nav-item"><a href="#slides" class="nav-link">Slides</a></li>
+            <li class="nav-item"><a href="#hobbies-challenges" class="nav-link">Hobbies & Challenges</a></li>
+            <li class="nav-item"><a href="#animeworld" class="nav-link">AnimeWorld</a></li>
+            <li class="nav-item last-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
 
     <!-- About Section -->
-    <div id="about" class="about-section">
+    <section id="about" class="about-section">
         <!-- Who am I Card -->
         <div class="about-card">
             <h3>Who am I?</h3>
@@ -63,7 +44,6 @@
             <p>I am a PhD candidate working in the fields of Biophysics and Biomineralization at the University of Oslo. My research focuses on stem cell differentiation, bone formation in hydrogels, and microfluidic technologies. I also research cell behavior on micropatterned substrates. I am passionate about microscopy, data analysis, and their applications in personalized medicine. Every new discovery feels like solving a puzzle—connecting the dots to understand why we are the way we are, and that curiosity keeps me hooked.</p>
         </div>
         
-    
         <!-- Areas of Interest Card -->
         <div class="about-card">
             <h3>Areas of Interest</h3>
@@ -72,149 +52,123 @@
             <p><strong>Organ-on-a-chip:</strong> Developing systems to mimic cellular environments for tissue engineering research.</p>
             <p><strong>Deep Learning:</strong> Applying AI models for automated image analysis and data classification.</p>
         </div>
-    </div>
-
+    </section>
 
     <!-- Resume Section -->
-
-<section id="resume">
-    <div class="resume-container">
-        <h2 class="mb-5"><span class="text-danger">My</span> Resume</h2>
-
-        <div class="resume-cards">
-            <!-- Education Section -->
-            <div class="resume-card">
-                <header class="resume-card-header">
-                    <h4>Education</h4>
-                </header>
-                <div class="resume-card-body">
-                    <ul class="resume-list">
-                        <p><strong>PhD in Biophysics:</strong> University of Oslo / NO (Aug 2022 - Present)</p>
-                        <p><strong>MS in Photonics Science and Engineering:</strong> Izmir Institute of Technology / TR (Sep 2018 - Jun 2021)</p>
-                        <p><strong>BS in Physics:</strong> Middle East Technical University / TR (Sep 2012 - Jun 2018)</p>
-                    </ul>
+    <section id="resume">
+        <div class="resume-container">
+            <h2 class="mb-5"><span class="text-danger">My</span> Resume</h2>
+            <div class="resume-cards">
+                <!-- Education Card -->
+                <div class="resume-card">
+                    <header class="resume-card-header">
+                        <h4>Education</h4>
+                    </header>
+                    <div class="resume-card-body">
+                        <ul class="resume-list">
+                            <p><strong>PhD in Biophysics:</strong> University of Oslo / NO (Aug 2022 - Present)</p>
+                            <p><strong>MS in Photonics Science and Engineering:</strong> Izmir Institute of Technology / TR (Sep 2018 - Jun 2021)</p>
+                            <p><strong>BS in Physics:</strong> Middle East Technical University / TR (Sep 2012 - Jun 2018)</p>
+                        </ul>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Research & Expertise Section (Wider) -->
-            <div class="resume-card resume-card-research">
-                <header class="resume-card-header">
-                    <h4>Research & Expertise</h4>
-                </header>
-                <div class="resume-card-body">
-                    <ul class="resume-list">
-                        <li><strong>PhD Candidate | Biophysics and Biomineralization</strong> - University of Oslo (Aug 2022 - Present)
-                            <ul role="list">
-                                <li>Modeling of biomineralization to understand factors affecting bone regeneration</li>
-                                <li>Experimental investigation of calcium phosphate biomineralization and interaction of bone/stem cells with the extracellular matrix</li>
-                                <li>Developing and maintaining automation protocols and ensuring lab safety compliance</li>
-                            </ul>
-                        </li>
-                        <li><strong>Visiting Researcher</strong> - University of Minnesota (Jul 2024 - Aug 2024)
-                            <ul role="list">
-                                <li>Worked on a Norwegian Centennial Chair (NOCC)-funded project on engineering cell tissue through topological patterning</li>
-                                <li>Designed and microfabricated topological defect patterns for tissue ordering</li>
-                                <li>Investigated HUASMC cell mechanics on fibronectin micropatterns using Traction Force Microscopy and PIV analysis</li>
-                            </ul>
-                        </li>
-                        <li><strong>Research Assistant</strong> - İzmir Institute of Technology (Mar 2020 - Aug 2022)
-                            <ul role="list">
-                                <li>Detection of rare cells using deep learning and lensless holography</li>
-                                <li>Assisted in the Applied Optics and Photonics Laboratory with a focus on diffraction patterns</li>
-                            </ul>
-                        </li>
-                        <li><strong>Erasmus Intern</strong> - Umeå University (Aug 2019 - Oct 2019)
-                            <ul role="list">
-                                <li>Characterization and analysis of bacterial p-pili folding-unfolding using Force Measuring Optical Tweezers</li>
-                            </ul>
-                        </li>
-                    </ul>
+                <!-- Research & Expertise Card -->
+                <div class="resume-card resume-card-research">
+                    <header class="resume-card-header">
+                        <h4>Research & Expertise</h4>
+                    </header>
+                    <div class="resume-card-body">
+                        <ul class="resume-list">
+                            <!-- PhD Candidate details -->
+                            <li><strong>PhD Candidate | Biophysics and Biomineralization</strong> - University of Oslo (Aug 2022 - Present)
+                                <ul role="list">
+                                    <li>Modeling of biomineralization to understand factors affecting bone regeneration</li>
+                                    <li>Experimental investigation of calcium phosphate biomineralization and interaction of bone/stem cells with the extracellular matrix</li>
+                                    <li>Developing and maintaining automation protocols and ensuring lab safety compliance</li>
+                                </ul>
+                            </li>
+                            <!-- Visiting Researcher details -->
+                            <li><strong>Visiting Researcher</strong> - University of Minnesota (Jul 2024 - Aug 2024)
+                                <ul role="list">
+                                    <li>Worked on a Norwegian Centennial Chair (NOCC)-funded project on engineering cell tissue through topological patterning</li>
+                                    <li>Designed and microfabricated topological defect patterns for tissue ordering</li>
+                                    <li>Investigated HUASMC cell mechanics on fibronectin micropatterns using Traction Force Microscopy and PIV analysis</li>
+                                </ul>
+                            </li>
+                            <!-- Research Assistant details -->
+                            <li><strong>Research Assistant</strong> - İzmir Institute of Technology (Mar 2020 - Aug 2022)
+                                <ul role="list">
+                                    <li>Detection of rare cells using deep learning and lensless holography</li>
+                                    <li>Assisted in the Applied Optics and Photonics Laboratory with a focus on diffraction patterns</li>
+                                </ul>
+                            </li>
+                            <!-- Erasmus Intern details -->
+                            <li><strong>Erasmus Intern</strong> - Umeå University (Aug 2019 - Oct 2019)
+                                <ul role="list">
+                                    <li>Characterization and analysis of bacterial p-pili folding-unfolding using Force Measuring Optical Tweezers</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Industry Experience Section -->
-            <div class="resume-card">
-                <header class="resume-card-header">
-                    <h4>Industry Experience</h4>
-                </header>
-                <div class="resume-card-body">
-                    <ul class="resume-list">
-                        <li>Collaborated with INITIO CELL on deep learning-enforced image analysis for organ-on-chip applications and developed a GUI interface for data analysis</li>
-                        <li>Interned at Omega Electronics A.S., working on LED luminaire design and testing</li>
-                    </ul>
+                <!-- Industry Experience Card -->
+                <div class="resume-card">
+                    <header class="resume-card-header">
+                        <h4>Industry Experience</h4>
+                    </header>
+                    <div class="resume-card-body">
+                        <ul class="resume-list">
+                            <li>Collaborated with INITIO CELL on deep learning-enforced image analysis for organ-on-chip applications and developed a GUI interface for data analysis</li>
+                            <li>Interned at Omega Electronics A.S., working on LED luminaire design and testing</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-    <!-- Hobbies and Challenges Section -->
     <!-- Slides Section -->
     <section id="slides" class="section">
         <h2 class="text-danger">Slides</h2>
         <p>This page was created with the assumption of regular updates to showcase some of my research activities. Details maybe later; better to ask.</p>
         <div class="slider-container">
             <div class="slides">
-                <div class="slide">
-                    <img src="assets/imgs/Slide1.png" alt="Slide1">
-                </div>
-                <div class="slide">
-                    <img src="assets/imgs/Slide2.png" alt="Slide2">
-                </div>
-                <div class="slide">
-                    <img src="assets/imgs/Slide3.png" alt="Slide3">
-                </div>
-                <div class="slide">
-                    <img src="assets/imgs/Slide4.png" alt="Slide4">
-                </div>
-                <div class="slide">
-                    <img src="assets/imgs/Slide5.png" alt="Slide5">
-                </div>
-                <!-- Add more slides as needed -->
+                <!-- Slide images -->
+                <div class="slide"><img src="assets/imgs/Slide1.png" alt="Slide1"></div>
+                <div class="slide"><img src="assets/imgs/Slide2.png" alt="Slide2"></div>
+                <div class="slide"><img src="assets/imgs/Slide3.png" alt="Slide3"></div>
+                <div class="slide"><img src="assets/imgs/Slide4.png" alt="Slide4"></div>
+                <div class="slide"><img src="assets/imgs/Slide5.png" alt="Slide5"></div>
             </div>
-
             <!-- Navigation buttons -->
             <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
             <button class="next" onclick="moveSlide(1)">&#10095;</button>
         </div>
     </section>
 
-    <!-- Scripts -->
-    <script>
-        let currentSlide = 0;
-
-        function moveSlide(direction) {
-            const slides = document.querySelector('.slides');
-            const totalSlides = document.querySelectorAll('.slide').length;
-
-            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
-
-            slides.style.transform = `translateX(${-currentSlide * 100}%)`;
-        }
-    </script>
-    
-
     <!-- Hobbies and Challenges Section -->
     <section id="hobbies-challenges" class="section">
         <h2 class="text-danger">Hobbies & Challenges</h2>
-        <p>As an amateur sports enthusiast, I’ve always aimed for small, achievable goals over time. It's all about the climb, one ladder rung at a time!</p>             <!-- Hobbies Column -->
-            <div class="hobbies-section">
-                <h4>Hobbies</h4>
-                <div class="section-content">
-                    <p>Running</p>
-                    <p>Cross Country Skiing</p>
-                    <p>Cycling</p>
-                </div>
+        <p>As an amateur sports enthusiast, I've always aimed for small, achievable goals over time. It's all about the climb, one ladder rung at a time!</p>
+        <!-- Hobbies Column -->
+        <div class="hobbies-section">
+            <h4>Hobbies</h4>
+            <div class="section-content">
+                <p>Running</p>
+                <p>Cross Country Skiing</p>
+                <p>Cycling</p>
             </div>
-            <!-- Challenges Column -->
-            <div class="challenges-section">
-                <h4>Challenges</h4>
-                <div class="section-content">
-                    <p>Birkebeinerrennet</p>
-                    <p>Ultra Trail (>60k)</p>
-                    <p>>160k Cycling</p>
-                    <p>>5000m Climbing</p>
-                </div>
+        </div>
+        <!-- Challenges Column -->
+        <div class="challenges-section">
+            <h4>Challenges</h4>
+            <div class="section-content">
+                <p>Birkebeinerrennet</p>
+                <p>Ultra Trail (>60k)</p>
+                <p>>160k Cycling</p>
+                <p>>5000m Climbing</p>
             </div>
         </div>
     </section>
@@ -223,7 +177,7 @@
     <section id="animeworld" class="section">
         <h2 class="text-danger">My Anime List</h2>
         <div class="img-holder">
-            I’ve always been fascinated by the boundless creativity of anime. To escape the more boring parts of life, I sometimes immerse myself in the anime world. The cloud below is a reminder for me, or a suggestion for you to explore.
+            <p>I've always been fascinated by the boundless creativity of anime. To escape the more boring parts of life, I sometimes immerse myself in the anime world. The cloud below is a reminder for me, or a suggestion for you to explore.</p>
             <img src="assets/imgs/worldcloudaad.png" alt="My Anime List Cloud Image" class="center" width="700" height="700">
         </div>
     </section>
@@ -233,58 +187,59 @@
         <h2 class="text-danger">Contact</h2>
         <div class="contact-content">
             <p>If you would like to get in touch for personal matters, please email me at:</p>
+
             <a href="mailto:aliaslandemir@gmail.com" target="_blank">
-                <button style="background-color: #D44638; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px;">
-                    Email via Gmail
-                </button>
-            </a>
-
-            <p style="margin-bottom: 50px;"></pstyle></p>
-
-
-            <p>If you would like to get in touch for professional reasons, please email me at:</p>
-            <a href="mailto:aliadem@uio.no" target="_blank">
-                <button style="background-color: #0072C6; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px;">
-                    Email via Outlook
-                </button>
-            </a>
-
-            <p style="margin-bottom: 50px;"></pstyle><strong>...</strong></p>
-
-            <p>Or connect with me on LinkedIn:</p>
-            <a href="https://www.linkedin.com/in/aliaslandemir/" target="_blank">
-                <button style="background-color: #0A66C2; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px;">
-                    LinkedIn Profile
-                </button>
+                <button class="gmail-button">Contact via Gmail</button>
             </a>
             
-            <p style="margin-bottom: 50px;"></pstyle><strong>...</strong></p>
-
+            <p class="spacer"></p>
+            
+            <p>If you would like to discuss professional opportunities, feel free to reach out at:</p>
+            <a href="mailto:aliadem@uio.no" target="_blank">
+                <button class="outlook-button">Contact via Gmail</button>
+            </a>
+            
+            <p class="spacer"><strong>...</strong></p>
+            
+            <p>You can also connect with me on LinkedIn:</p>
+            <a href="https://www.linkedin.com/in/aliaslandemir/" target="_blank">
+                <button class="linkedin-button">Visit my LinkedIn Profile</button>
+            </a>
+            
+            
+            <p class="spacer"><strong>...</strong></p>
 
             <p>The image below is from a real advertisement board picture that remained unchanged around 10 years of my lifetime span; never updated, yet still there, as if it holds hope that someone will eventually look at it/change it. Translation: (Buraya Bakarlar - They'll Take Notice Here).</p>
             <div class="img-holder">
                 <img src="assets/imgs/bakarlar.webp" alt="Contact Image" class="contact-image">
-                <p class="funny-text">
-                    Okay, folks, I think I’ve hit my seriousness quota. Life’s like a good book — just think about the moments in between. Remember to embrace your definitive derivative!</p>
-                </div>
+                <p class="funny-text">Okay, folks, I think I've hit my seriousness quota. Life's like a good book — just think about the moments in between. Remember to embrace your definitive derivative!</p>
+            </div>
         </div>
     </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024; Ali Aslan Demir.</p>        </div>
-    </footer>  
-    <!-- Core Scripts -->
-     <!-- Bootstrap JS and dependencies (Popper.js and jQuery) -->
+            <p>&copy; 2024; Ali Aslan Demir.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- AOS JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <!-- Your Main JS -->
     <script src="assets/js/main.js"></script>
+
+    <!-- Slide Navigation Script -->
+    <script>
+        let currentSlide = 0;
+        function moveSlide(direction) {
+            const slides = document.querySelector('.slides');
+            const totalSlides = document.querySelectorAll('.slide').length;
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+            slides.style.transform = `translateX(${-currentSlide * 100}%)`;
+        }
+    </script>
 </body>
 </html>

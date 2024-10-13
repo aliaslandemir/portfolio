@@ -1,4 +1,4 @@
-/* Importing Google Fonts for a more professional look */
+/* Importing Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap");
 
 /* Root Variables */
@@ -20,6 +20,7 @@
   box-sizing: border-box;
 }
 
+/* Base Styles */
 html, body {
   margin: 0;
   padding: 0;
@@ -30,13 +31,11 @@ html, body {
   color: var(--font-color-dark);
 }
 
-
-
 /* Header Section */
 .header {
   text-align: center;
   padding: 20px 20px 50px;
-  position: relative; /* Ensure positioning works properly */
+  position: relative;
 }
 
 .header::before {
@@ -46,38 +45,36 @@ html, body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better contrast */
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 0;
 }
 
 .header .header-content {
   position: relative;
-  z-index: 1; /* Ensure content stays above the overlay */
+  z-index: 1;
 }
 
 .header .header-title {
   font-size: 3.5rem;
   font-weight: 700;
   color: #ffffff;
-  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.6); /* Stronger shadow for better visibility */
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.6);
   margin-bottom: 10px;
 }
 
 .header .header-subtitle {
   font-size: 1.8rem;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.8); /* Slightly dimmed for contrast */
+  color: rgba(255, 255, 255, 0.8);
   text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
   margin-bottom: 20px;
 }
 
-
-
-/* Updated Navbar Styles */
+/* Navbar Styles */
 nav.navbar {
   display: flex;
-  justify-content: center; /* Centers the items horizontally */
-  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.9);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
@@ -86,7 +83,7 @@ nav.navbar {
 
 .navbar-nav {
   display: flex;
-  gap: 20px; /* Adds spacing between the items */
+  gap: 20px;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -101,22 +98,10 @@ nav.navbar {
   transition: color 0.3s ease-in-out;
 }
 
-.navbar-nav .nav-link:hover {
-  color: #ff5e5e;
-}
-
+.navbar-nav .nav-link:hover,
 .navbar-nav .active {
   color: #ff5e5e;
 }
-
-/* Adjust for mobile */
-@media (max-width: 768px) {
-  .navbar-nav {
-      flex-direction: column;
-      gap: 10px;
-  }
-}
-
 
 /* Page Layout */
 .container, .container-fluid {
@@ -136,13 +121,12 @@ a:hover {
 }
 
 /* About Section */
-/* Updated About Section Layout */
 .about-section {
   display: flex;
-  justify-content: space-between; /* This ensures the cards are distributed more closely */
+  justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-  gap: 10px; /* Reduce the gap between the cards */
+  gap: 10px;
   padding: 40px 20px;
 }
 
@@ -150,12 +134,12 @@ a:hover {
   background-color: var(--bg-color-light);
   border-radius: var(--border-radius);
   padding: 10px;
-  max-width: 320px; /* Increase this to make the cards slightly wider */
-  margin: 0 auto; /* Center the cards within the available space */
+  max-width: 320px;
+  margin: 0 auto;
   box-shadow: var(--box-shadow);
   text-align: left;
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
 }
-
 
 .about-card:hover {
   transform: translateY(-5px);
@@ -182,27 +166,16 @@ a:hover {
   margin-bottom: 20px;
 }
 
-/* Add responsiveness */
-@media (max-width: 768px) {
-  .about-section {
-      flex-direction: column;
-      align-items: center;
-  }
-}
-
-
 /* Resume Section */
-/* Resume Cards Grid Layout */
 .resume-cards {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr; /* Sets the middle card (Research & Expertise) to be 2x wider */
+  grid-template-columns: 1fr 2fr 1fr;
   gap: 30px;
   padding: 30px;
   background-color: #f8f9fa;
   border-radius: 10px;
 }
 
-/* Resume Card */
 .resume-card {
   background-color: #ffffff;
   border-radius: 10px;
@@ -216,12 +189,10 @@ a:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Wider Research & Expertise Section */
 .resume-card-research {
-  grid-column: span 1.5; /* Spans 2 columns to make it 2x wider */
+  grid-column: span 1.5;
 }
 
-/* Resume Card Header */
 .resume-card-header h4 {
   font-size: 1.5rem;
   color: var(--primary-color);
@@ -229,7 +200,6 @@ a:hover {
   margin-bottom: 20px;
 }
 
-/* Resume Card Body */
 .resume-card-body ul {
   padding-left: 20px;
   text-align: left;
@@ -252,18 +222,6 @@ h2 {
 h2 span {
   color: #ff5e5e;
 }
-
-/* Media Queries for Responsive Design */
-@media (max-width: 768px) {
-  .resume-cards {
-      grid-template-columns: 1fr; /* Stack cards in one column on small screens */
-  }
-
-  .resume-card-research {
-      grid-column: span 1; /* Back to normal width on small screens */
-  }
-}
-
 
 /* Hobbies and Challenges Section */
 .hobbies-challenges-container {
@@ -298,14 +256,13 @@ h2 span {
 }
 
 .section {
-  padding: 80px 20px; /* Increase vertical spacing between sections */
+  padding: 80px 20px;
   text-align: center;
 }
 
 .section:not(:last-of-type) {
-  margin-bottom: 60px; /* Space between sections */
+  margin-bottom: 60px;
 }
-
 
 /* AnimeWorld Section */
 .img-holder {
@@ -317,6 +274,8 @@ h2 span {
   max-width: 100%;
   height: auto;
   border-radius: var(--border-radius);
+  display: block;
+  margin: 0 auto 60px;
 }
 
 /* Contact Section */
@@ -341,87 +300,82 @@ h2 span {
 }
 
 .contact-image {
-  max-width: 100px; /* Adjust size of the image */
+  max-width: 100px;
   border-radius: 10px;
   margin-top: 20px;
 }
 
-
-
-/* Navigation buttons */
-/* Slide container style */
+/* Slider Styles */
 .slider-container {
-  width: 70%; /* Adjust width of the slider container */
+  width: 70%;
   max-width: 800px;
-  margin: 0 auto; /* Center align the slider */
+  height: 500px;
+  margin: 0 auto;
   overflow: hidden;
   border: 1px solid #ddd;
   border-radius: 10px;
   position: relative;
-  height: 500px; /* Set a fixed height for consistency */
   display: flex;
-  justify-content: center; /* Center horizontally */
+  justify-content: center;
+  align-items: center;
 }
 
-/* Individual slides */
 .slides {
   display: flex;
   transition: transform 0.5s ease-in-out;
+  height: 100%;
+  align-items: center;
 }
 
-/* Slide style */
 .slide {
   min-width: 100%;
   box-sizing: border-box;
   display: flex;
-  align-items: center;      /* Center vertically */
+  justify-content: center;
+  align-items: center;
 }
 
-/* Image styling */
 .slide img {
-  max-width: 100%; /* Ensures the image doesn't overflow horizontally */
-  max-height: 100%; /* Ensures the image doesn't overflow vertically */
-  object-fit: contain; /* Scales the image while keeping its aspect ratio */
+  max-width: 100%;
+  max-height: 100%;
   display: block;
-  margin: auto; /* Extra centering assurance */
   border-radius: 10px;
+  object-fit: contain;
 }
 
-/* Navigation buttons */
+/* Navigation Buttons */
 .prev, .next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.8); /* Dark background for better visibility */
+  background-color: rgba(0, 0, 0, 0.8);
   color: white;
   border: none;
-  padding: 15px 25px; /* Longer padding for horizontal shape */
+  padding: 15px 25px;
   cursor: pointer;
-  border-radius: 30px; /* Rounded ends */
-  font-size: 24px; /* Larger font for arrow icon */
-  z-index: 10; /* Ensure buttons are above the slides */
+  border-radius: 30px;
+  font-size: 24px;
+  z-index: 10;
   transition: background-color 0.3s ease;
-  width: 60px; /* Longer width for a horizontal arrow */
-  height: 60px; /* Fixed height */
+  width: 60px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .prev {
-  left: 20px; /* Positioned on the left */
+  left: 20px;
 }
 
 .next {
-  right: 20px; /* Positioned on the right */
+  right: 20px;
 }
 
-/* Button hover effect */
 .prev:hover, .next:hover {
-  background-color: rgba(0, 0, 0, 1); /* Fully opaque on hover */
+  background-color: rgba(0, 0, 0, 1);
 }
 
-/* Arrow shape (using CSS triangles) */
 .prev::before, .next::before {
   content: '';
   position: absolute;
@@ -442,116 +396,98 @@ h2 span {
   right: 10px;
 }
 
-
-
-/* Add margin to create space between image and text */
-.img-holder img {
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 60px; /* Adds vertical space after the image */
-}
-
-/* Funny text animation */
+/* Funny Text Animation */
 .funny-text {
   font-size: 1.2rem;
-  color: #FF5733; /* Fun bright color */
+  color: #FF5733;
   text-align: center;
   animation: bounce 2s infinite ease-in-out, color-change 5s infinite;
   transform-origin: center;
-  font-family: 'Comic Sans MS', cursive, sans-serif; /* Funny font */
+  font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
-/* Bounce effect */
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-      transform: translateY(0);
-  }
-  40% {
-      transform: translateY(-30px);
-  }
-  60% {
-      transform: translateY(-15px);
-  }
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-30px); }
+  60% { transform: translateY(-15px); }
 }
 
-/* Color change animation */
 @keyframes color-change {
-  0% {
-      color: #5DADE2;  /* Cool Ice Blue */
+  0%, 100% { color: #5DADE2; }
+  25% { color: #2980B9; }
+  50% { color: #1ABC9C; }
+  75% { color: #2C3E50; }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column;
+    gap: 10px;
   }
-  25% {
-      color: #2980B9;  /* Deep Blue */
+
+  .about-section {
+    flex-direction: column;
+    align-items: center;
   }
-  50% {
-      color: #1ABC9C;  /* Cool Mint */
+
+  .resume-cards {
+    grid-template-columns: 1fr;
   }
-  75% {
-      color: #2C3E50;  /* Dark Slate Blue */
-  }
-  100% {
-      color: #5DADE2;  /* Cool Ice Blue */
+
+  .resume-card-research {
+    grid-column: span 1;
   }
 }
 
-
-
-.slider-container {
-  width: 70%; /* Adjust width of the slider container */
-  max-width: 800px;
-  height: 500px; /* Ensure a consistent height */
-  margin: 0 auto; /* Center align the slider */
-  overflow: hidden;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  position: relative;
-  display: flex;
-  justify-content: center; /* Horizontally center the content */
-  align-items: center; /* Vertically center the content */
-}
-
-/* Individual slides */
-.slides {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  height: 100%; /* Ensure slides take the full height of the container */
-  align-items: center; /* Vertically center images */
-}
-
-/* Slide style */
-.slide {
-  min-width: 100%;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center; /* Horizontally center each image */
-  align-items: center; /* Vertically center each image */
-}
-
-/* Scale images to fit in the slide */
-.slide img {
-  max-width: 100%;
-  max-height: 100%;
-  display: block;
-  border-radius: 10px;
-  object-fit: contain; /* Ensures images retain aspect ratio while fitting inside the container */
-}
-
-/* Navigation buttons */
-.prev, .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+/* General Button Styles */
+button {
+  padding: 12px 24px;
   border: none;
-  padding: 10px;
+  border-radius: 50px;
+  font-family: 'Helvetica', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
   cursor: pointer;
-  border-radius: 50%;
+  transition: all 0.3s ease;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.5px;
 }
 
-.prev {
-  left: 10px;
+button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2);
 }
 
-.next {
-  right: 10px;
+/* Gmail Button - Red Gradient */
+.gmail-button {
+  background: linear-gradient(135deg, #ff6f61, #ff3d3d);
+}
+
+.gmail-button:hover {
+  background: linear-gradient(135deg, #ff3d3d, #ff6f61);
+}
+
+/* Outlook Button - Blue Gradient */
+.outlook-button {
+  background: linear-gradient(135deg, #0078d4, #0044a9);
+}
+
+.outlook-button:hover {
+  background: linear-gradient(135deg, #0044a9, #0078d4);
+}
+
+/* LinkedIn Button - Dark Green Gradient */
+.linkedin-button {
+  background: linear-gradient(135deg, #0f5132, #044a29);
+}
+
+.linkedin-button:hover {
+  background: linear-gradient(135deg, #044a29, #0f5132);
+}
+
+/* Spacer to adjust spacing between elements */
+.spacer {
+  margin: 20px 0;
 }
