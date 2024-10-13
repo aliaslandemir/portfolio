@@ -35,7 +35,7 @@ html, body {
 /* Header Section */
 .header {
   text-align: center;
-  padding: 20px 20px 40px;
+  padding: 20px 20px 50px;
   position: relative; /* Ensure positioning works properly */
 }
 
@@ -56,7 +56,7 @@ html, body {
 }
 
 .header .header-title {
-  font-size: 4.5rem;
+  font-size: 3.5rem;
   font-weight: 700;
   color: #ffffff;
   text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.6); /* Stronger shadow for better visibility */
@@ -142,7 +142,7 @@ a:hover {
   justify-content: space-between; /* This ensures the cards are distributed more closely */
   align-items: flex-start;
   flex-wrap: wrap;
-  gap: 1px; /* Reduce the gap between the cards */
+  gap: 10px; /* Reduce the gap between the cards */
   padding: 40px 20px;
 }
 
