@@ -398,13 +398,16 @@ h2 span {
 
 /* Funny Text Animation */
 .funny-text {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: #FF5733;
   text-align: center;
   animation: bounce 2s infinite ease-in-out, color-change 5s infinite;
   transform-origin: center;
-  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
