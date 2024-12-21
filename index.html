@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-aos-easing="ease-out" data-aos-duration="800" data-aos-delay="0">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -8,12 +8,14 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/aad.css">
 </head>
 <body>
     <!-- Header Section -->
-    <header class="header">
+    <header class="header" data-aos="fade-in" data-aos-duration="1500">
         <div class="container">
             <div class="header-content">
                 <h4 class="header-subtitle">Welcome, I'm</h4>
@@ -23,7 +25,7 @@
     </header>
 
     <!-- Navigation -->
-    <nav class="navbar sticky-top navbar-expand-lg">
+    <nav class="navbar sticky-top navbar-expand-lg" data-aos="fade-down" data-aos-duration="1000">
         <ul class="navbar-nav">
             <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
             <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
@@ -36,19 +38,17 @@
         </ul>
     </nav>
     
-    
-
     <!-- About Section -->
-    <section id="about" class="about-section">
+    <section id="about" class="about-section" data-aos="fade-up">
         <!-- Who am I Card -->
-        <div class="about-card">
+        <div class="about-card" data-aos="zoom-in" data-aos-delay="200">
             <h3>Who am I?</h3>
             <img src="assets/imgs/picture.png" alt="Ali Aslan Demir">
             <p>I am a PhD candidate working in the fields of Biophysics and Biomineralization at the University of Oslo. My research focuses on stem cell differentiation, bone formation in hydrogels, and microfluidic technologies. I also research cell behavior on micropatterned substrates. I am passionate about microscopy, data analysis, and their applications in personalized medicine. Every new discovery feels like solving a puzzle—connecting the dots to understand why we are the way we are, and that curiosity keeps me hooked.</p>
         </div>
         
         <!-- Areas of Interest Card -->
-        <div class="about-card">
+        <div class="about-card" data-aos="zoom-in" data-aos-delay="400">
             <h3>Areas of Interest</h3>
             <p><strong>Biomineralization:</strong> Researching calcium phosphate transformations for bone tissue engineering.</p>
             <p><strong>Biophysics:</strong> Understanding how mechanical forces and biological interactions influence cellular behavior.</p>
@@ -58,12 +58,12 @@
     </section>
 
     <!-- Resume Section -->
-    <section id="resume">
+    <section id="resume" data-aos="fade-up">
         <div class="resume-container">
             <h2 class="mb-5"><span class="text-danger">Resume</span> </h2>
             <div class="resume-cards">
                 <!-- Education Card -->
-                <div class="resume-card">
+                <div class="resume-card" data-aos="fade-right">
                     <header class="resume-card-header">
                         <h4>Education</h4>
                     </header>
@@ -77,13 +77,12 @@
                 </div>
 
                 <!-- Research & Expertise Card -->
-                <div class="resume-card resume-card-research">
+                <div class="resume-card resume-card-research" data-aos="fade-up" data-aos-delay="200">
                     <header class="resume-card-header">
                         <h4>Research & Expertise</h4>
                     </header>
                     <div class="resume-card-body">
                         <ul class="resume-list">
-                            <!-- PhD Candidate details -->
                             <li><strong>PhD Candidate | Biophysics and Biomineralization</strong> - University of Oslo (Aug 2022 - Present)
                                 <ul role="list">
                                     <li>Modeling of biomineralization to understand factors affecting bone regeneration</li>
@@ -91,7 +90,6 @@
                                     <li>Developing and maintaining automation protocols and ensuring lab safety compliance</li>
                                 </ul>
                             </li>
-                            <!-- Visiting Researcher details -->
                             <li><strong>Visiting Researcher</strong> - University of Minnesota (Jul 2024 - Aug 2024)
                                 <ul role="list">
                                     <li>Worked on a Norwegian Centennial Chair (NOCC)-funded project on engineering cell tissue through topological patterning</li>
@@ -99,14 +97,12 @@
                                     <li>Investigated HUASMC cell mechanics on fibronectin micropatterns using Traction Force Microscopy and PIV analysis</li>
                                 </ul>
                             </li>
-                            <!-- Research Assistant details -->
                             <li><strong>Research Assistant</strong> - İzmir Institute of Technology (Mar 2020 - Aug 2022)
                                 <ul role="list">
                                     <li>Detection of rare cells using deep learning and lensless holography</li>
                                     <li>Assisted in the Applied Optics and Photonics Laboratory with a focus on diffraction patterns</li>
                                 </ul>
                             </li>
-                            <!-- Erasmus Intern details -->
                             <li><strong>Erasmus Intern</strong> - Umeå University (Aug 2019 - Oct 2019)
                                 <ul role="list">
                                     <li>Characterization and analysis of bacterial p-pili folding-unfolding using Force Measuring Optical Tweezers</li>
@@ -117,7 +113,7 @@
                 </div>
 
                 <!-- Industry Experience Card -->
-                <div class="resume-card">
+                <div class="resume-card" data-aos="fade-left" data-aos-delay="400">
                     <header class="resume-card-header">
                         <h4>Industry Experience</h4>
                     </header>
@@ -133,32 +129,29 @@
     </section>
 
     <!-- Slides Section -->
-    <section id="slides" class="section">
+    <section id="slides" class="section" data-aos="fade-up">
         <h2 class="text-danger">Slides</h2>
         <p>This page was created with the assumption of regular updates to showcase some of my research activities. Details maybe later; better to ask.</p>
         <div class="slider-container">
             <div class="slides">
-                <!-- Slide images -->
                 <div class="slide"><img src="assets/imgs/Slide1.png" alt="Slide1"></div>
                 <div class="slide"><img src="assets/imgs/Slide2.png" alt="Slide2"></div>
                 <div class="slide"><img src="assets/imgs/Slide3.png" alt="Slide3"></div>
                 <div class="slide"><img src="assets/imgs/Slide4.png" alt="Slide4"></div>
                 <div class="slide"><img src="assets/imgs/Slide5.png" alt="Slide5"></div>
             </div>
-            <!-- Navigation buttons -->
             <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
             <button class="next" onclick="moveSlide(1)">&#10095;</button>
         </div>
     </section>
 
     <!-- Beyond the Mesh Section -->
-    <section id="beyond-the-mesh" class="section">
+    <section id="beyond-the-mesh" class="section" data-aos="fade-up">
         <h2 class="text-danger">Beyond the Mesh</h2>
         <p>"Beyond the Mesh" explores the unseen truths of science, life, and creativity. These videos unveil stories that challenge perfection and embrace curiosity. Watch the journey unfold below:</p>
         
         <div class="youtube-videos">
-            <!-- Video 1 -->
-            <div class="video">
+            <div class="video" data-aos="zoom-in" data-aos-delay="100">
                 <h4>Video 1: Blessed Be the Light</h4>
                 <iframe width="560" height="315" 
                         src="https://www.youtube.com/embed/VIDEO_ID_1" 
@@ -169,8 +162,7 @@
                 </iframe>
             </div>
             
-            <!-- Video 2 -->
-            <div class="video">
+            <div class="video" data-aos="zoom-in" data-aos-delay="200">
                 <h4>Video 2: The Invisible Thread</h4>
                 <iframe width="560" height="315" 
                         src="https://www.youtube.com/embed/VIDEO_ID_2" 
@@ -181,8 +173,7 @@
                 </iframe>
             </div>
             
-            <!-- Video 3 -->
-            <div class="video">
+            <div class="video" data-aos="zoom-in" data-aos-delay="300">
                 <h4>Video 3: A Minima</h4>
                 <iframe width="560" height="315" 
                         src="https://www.youtube.com/embed/VIDEO_ID_3" 
@@ -193,8 +184,7 @@
                 </iframe>
             </div>
             
-            <!-- Video 4 -->
-            <div class="video">
+            <div class="video" data-aos="zoom-in" data-aos-delay="400">
                 <h4>Video 4: Beneath the Surface</h4>
                 <iframe width="560" height="315" 
                         src="https://www.youtube.com/embed/VIDEO_ID_4" 
@@ -205,8 +195,7 @@
                 </iframe>
             </div>
             
-            <!-- Video 5 -->
-            <div class="video">
+            <div class="video" data-aos="zoom-in" data-aos-delay="500">
                 <h4>Video 5: Immortal Creatures in the Lab</h4>
                 <iframe width="560" height="315" 
                         src="https://www.youtube.com/embed/VIDEO_ID_5" 
@@ -219,34 +208,34 @@
         </div>
     </section>
 
-
     <!-- Hobbies and Challenges Section -->
-    <section id="hobbies-challenges" class="section">
+    <section id="hobbies-challenges" class="section" data-aos="fade-up">
         <h2 class="text-danger">Hobbies & Challenges</h2>
         <p>As an amateur sports enthusiast, I've always aimed for small, achievable goals over time. It's all about the climb, one ladder rung at a time!</p>
-        <!-- Hobbies Column -->
-        <div class="hobbies-section">
-            <h4>Hobbies</h4>
-            <div class="section-content">
-                <p>Running</p>
-                <p>Cross Country Skiing</p>
-                <p>Cycling</p>
+        <div class="hobbies-challenges-container">
+            <div class="hobbies-section" data-aos="flip-left" data-aos-delay="200">
+                <h4>Hobbies</h4>
+                <div class="section-content">
+                    <p>Running</p>
+                    <p>Cross Country Skiing</p>
+                    <p>Cycling</p>
+                </div>
             </div>
-        </div>
-        <!-- Challenges Column -->
-        <div class="challenges-section">
-            <h4>Challenges</h4>
-            <div class="section-content">
-                <p>Birkebeinerrennet</p>
-                <p>Ultra Trail (>60k)</p>
-                <p>>160k Cycling</p>
-                <p>>5000m Climbing</p>
+            
+            <div class="challenges-section" data-aos="flip-right" data-aos-delay="400">
+                <h4>Challenges</h4>
+                <div class="section-content">
+                    <p>Birkebeinerrennet</p>
+                    <p>Ultra Trail (&gt;60k)</p>
+                    <p>&gt;160k Cycling</p>
+                    <p>&gt;5000m Climbing</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Anime World Section -->
-    <section id="animeworld" class="section">
+    <section id="animeworld" class="section" data-aos="fade-up">
         <h2 class="text-danger">My Anime List</h2>
         <div class="img-holder">
             <p>I've always been fascinated by the boundless creativity of anime. To escape the more boring parts of life, I sometimes immerse myself in the anime world. The cloud below is a reminder for me, or a suggestion for you to explore.</p>
@@ -255,7 +244,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section">
+    <section id="contact" class="section" data-aos="fade-up">
         <h2 class="text-danger">Contact</h2>
         <div class="contact-content">
             <p>If you would like to get in touch for personal matters, please email me at:</p>
@@ -278,7 +267,6 @@
                 <button class="linkedin-button">Visit my LinkedIn Profile</button>
             </a>
             
-            
             <p class="spacer"><strong>...</strong></p>
 
             <p>The image below is from a real advertisement board picture that remained unchanged around 10 years of my lifetime span; never updated, yet still there, as if it holds hope that someone will eventually look at it/change it. Translation: (Buraya Bakarlar - They'll Take Notice Here).</p>
@@ -290,7 +278,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" data-aos="fade-up">
         <div class="container">
             <p>&copy; 2024; Ali Aslan Demir.</p>
         </div>
@@ -301,6 +289,9 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="assets/js/main.js"></script>
 
     <!-- Slide Navigation Script -->
