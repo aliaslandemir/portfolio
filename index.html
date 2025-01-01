@@ -1,308 +1,967 @@
 <!DOCTYPE html>
 <html lang="en" data-aos-easing="ease-out" data-aos-duration="800" data-aos-delay="0">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="aad">
-    <title>Ali Aslan Demir | Portfolio</title>
-    <!-- External CSS -->
-    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- AOS CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/aad.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="author" content="aad" />
+  <title>Ali Aslan Demir | Portfolio</title>
+
+  <!-- External CSS / Icons -->
+  <link
+    rel="stylesheet"
+    href="assets/vendors/themify-icons/css/themify-icons.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  />
+  <!-- AOS CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+  />
+
+  <!-- Custom CSS -->
+  <style>
+    /* ---------------------------------------
+       COLORS & FONTS
+    --------------------------------------- */
+    /* Try out these accent colors throughout. */
+    :root {
+      --dark-green: #2e8b57;
+      --red: #dc3545;
+      --blue: #1e90ff;
+      --purple: #6f42c1;
+      --text-color: #f2f2f2;
+      --gradient-colors: linear-gradient(
+        135deg,
+        var(--dark-green) 0%,
+        var(--red) 30%,
+        var(--blue) 60%,
+        var(--purple) 100%
+      );
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html,
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #111; /* main background */
+      color: var(--text-color);
+      overflow-x: hidden;
+    }
+
+    a {
+      color: var(--red);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    a:hover {
+      color: #ff5c76;
+    }
+
+    /* ---------------------------------------
+       HEADER SECTION
+    --------------------------------------- */
+    .header {
+      position: relative;
+      height: 50vh; /* half the screen height now */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      /* Fancy gradient swirl background. 
+         You could replace with a background image + overlay 
+         or add a subtle pattern to spice things up. */
+      background: radial-gradient(
+          circle at top left,
+          rgba(46, 139, 87, 0.4),
+          rgba(220, 53, 69, 0.2),
+          rgba(30, 144, 255, 0.4),
+          rgba(111, 66, 193, 0.3)
+        ),
+        #000;
+      overflow: hidden;
+    }
+
+    /* Optional decorative wave at bottom of header */
+    .header::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 80px;
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1440 320' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23000' fill-opacity='1' d='M0,320L80,277.3C160,235,320,149,480,160C640,171,800,277,960,282.7C1120,288,1280,192,1360,144L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z'%3E%3C/path%3E%3C/svg%3E")
+        no-repeat center;
+      background-size: cover;
+      z-index: 1;
+    }
+
+    .header-content {
+      z-index: 2;
+      max-width: 800px;
+      margin: 0 20px;
+    }
+    .header-subtitle {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+    .header-title {
+      font-size: 2.6rem;
+      margin: 0.5rem 0;
+      /* Example of a “gradient text” effect for the main name */
+      background: var(--gradient-colors);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+    }
+    .header-quote {
+      font-size: 1rem;
+      opacity: 0.8;
+      max-width: 650px;
+      margin: 1rem auto 0 auto;
+    }
+
+    /* ---------------------------------------
+       NAVBAR
+    --------------------------------------- */
+    .navbar {
+      background: #111;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .navbar-nav {
+      margin: 0 auto;
+    }
+    .nav-link {
+      color: var(--text-color);
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      padding: 12px 18px;
+    }
+    .nav-item:last-child .nav-link {
+      font-weight: 600;
+      color: var(--purple);
+    }
+    .nav-link:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 4px;
+    }
+
+    /* ---------------------------------------
+       SECTIONS
+    --------------------------------------- */
+    section {
+      position: relative;
+      padding: 60px 20px;
+    }
+    section h2 {
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      background: var(--gradient-colors);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .section-desc {
+      max-width: 800px;
+      margin: 0 auto 40px auto;
+      text-align: center;
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+
+    /* Glass morph effect box / fancy containers */
+    .glass-box {
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      padding: 25px;
+      margin: 1rem 0;
+    }
+
+    /* ---------------------------------------
+       ABOUT
+    --------------------------------------- */
+    .about-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+    .about-card {
+      flex: 1 1 300px;
+      min-width: 300px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .about-card img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      margin-bottom: 1rem;
+      transition: transform 0.3s;
+    }
+    .about-card img:hover {
+      transform: scale(1.05);
+    }
+    .about-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+    }
+
+    /* ---------------------------------------
+       RESUME
+    --------------------------------------- */
+    .resume-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .resume-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 20px;
+    }
+    .resume-card-header {
+      background: var(--gradient-colors);
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 8px 8px 0 0;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .resume-card-header h4 {
+      margin: 0;
+    }
+    .resume-card-body {
+      padding: 20px;
+    }
+    .resume-list p,
+    .resume-list li {
+      margin-bottom: 8px;
+    }
+    .resume-list li {
+      list-style: circle inside;
+    }
+
+    /* ---------------------------------------
+       SLIDES
+    --------------------------------------- */
+    .slider-container {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    }
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .slide {
+      min-width: 100%;
+    }
+    .slide img {
+      display: block;
+      width: 100%;
+    }
+    .prev,
+    .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.4);
+      border: none;
+      outline: none;
+      padding: 0 15px;
+      cursor: pointer;
+      z-index: 5;
+      transition: background 0.3s;
+    }
+    .prev:hover,
+    .next:hover {
+      background: rgba(0, 0, 0, 0.7);
+    }
+    .prev {
+      left: 0;
+      border-radius: 0 8px 8px 0;
+    }
+    .next {
+      right: 0;
+      border-radius: 8px 0 0 8px;
+    }
+
+    /* ---------------------------------------
+       BEYOND THE MESH
+    --------------------------------------- */
+    .youtube-videos {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 20px;
+    }
+    .video {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      padding: 20px;
+      text-align: center;
+    }
+    .video h4 {
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      background: var(--gradient-colors);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .video iframe {
+      width: 100%;
+      height: 220px;
+      border-radius: 8px;
+    }
+
+    /* ---------------------------------------
+       HOBBIES & CHALLENGES
+    --------------------------------------- */
+    .hc-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 40px;
+    }
+    .hc-card {
+      flex: 1 1 280px;
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      padding: 20px;
+      text-align: center;
+    }
+    .hc-card h4 {
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      font-size: 1.1rem;
+      background: var(--gradient-colors);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hc-card p {
+      margin-bottom: 8px;
+    }
+
+    /* ---------------------------------------
+       ANIME WORLD
+    --------------------------------------- */
+    .anime-content {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .anime-content img {
+      border-radius: 12px;
+      border: 2px solid var(--purple);
+      margin: 20px 0;
+      transition: transform 0.3s;
+    }
+    .anime-content img:hover {
+      transform: scale(1.04);
+    }
+
+    /* ---------------------------------------
+       CONTACT
+    --------------------------------------- */
+    .contact-content {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .contact-btn {
+      display: inline-block;
+      border: none;
+      padding: 10px 20px;
+      margin: 10px 5px;
+      color: #fff;
+      cursor: pointer;
+      text-transform: uppercase;
+      background: var(--gradient-colors);
+      border-radius: 4px;
+      font-weight: 600;
+      transition: transform 0.3s;
+    }
+    .contact-btn:hover {
+      transform: translateY(-3px);
+    }
+    .contact-image {
+      max-width: 400px;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
+    }
+    .funny-text {
+      font-style: italic;
+      font-size: 0.9rem;
+      opacity: 0.8;
+      line-height: 1.4;
+      margin-top: 20px;
+    }
+
+    /* ---------------------------------------
+       FOOTER
+    --------------------------------------- */
+    .footer {
+      background: #111;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+      padding: 20px;
+      color: #aaa;
+      font-size: 0.9rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* ---------------------------------------
+       SCROLL TO TOP BUTTON
+    --------------------------------------- */
+    #scrollTopBtn {
+      display: none;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 99;
+      font-size: 20px;
+      background: var(--dark-green);
+      color: #fff;
+      border: none;
+      outline: none;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+      transition: background 0.3s;
+    }
+    #scrollTopBtn:hover {
+      background: var(--red);
+    }
+  </style>
 </head>
+
 <body>
-    <!-- Header Section -->
-    <header class="header" data-aos="fade-in" data-aos-duration="1500">
-        <div class="container">
-            <div class="header-content">
-                <h4 class="header-subtitle">Welcome, I'm</h4>
-                <h1 class="header-title">Ali Aslan Demir</h1>
-            </div>
-        </div>
-    </header>
+  <!-- Header Section -->
+  <header class="header" data-aos="fade-in" data-aos-duration="1200" id="home">
+    <div class="header-content">
+      <h4 class="header-subtitle" data-aos="fade-in" data-aos-delay="400">
+        Welcome, I'm
+      </h4>
+      <h1 class="header-title" data-aos="fade-up" data-aos-delay="600">
+        Ali Aslan Demir
+      </h1>
+    </div>
+  </header>
 
-    <!-- Navigation -->
-    <nav class="navbar sticky-top navbar-expand-lg" data-aos="fade-down" data-aos-duration="1000">
-        <ul class="navbar-nav">
-            <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-            <li class="nav-item"><a href="#resume" class="nav-link">Resume</a></li>
-            <li class="nav-item"><a href="#slides" class="nav-link">Slides</a></li>
-            <li class="nav-item"><a href="#beyond-the-mesh" class="nav-link">Beyond The Mesh</a></li>
-            <li class="nav-item"><a href="#hobbies-challenges" class="nav-link">Hobbies & Challenges</a></li>
-            <li class="nav-item"><a href="#animeworld" class="nav-link">AnimeWorld</a></li>
-            <li class="nav-item last-item"><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-    </nav>
+  <!-- Navigation -->
+  <nav
+    class="navbar navbar-expand-lg"
+    data-aos="fade-down"
+    data-aos-duration="1000"
+  >
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="#home" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="#about" class="nav-link">About</a>
+      </li>
+      <li class="nav-item">
+        <a href="#resume" class="nav-link">Resume</a>
+      </li>
+      <li class="nav-item">
+        <a href="#slides" class="nav-link">Slides</a>
+      </li>
+      <li class="nav-item">
+        <a href="#beyond-the-mesh" class="nav-link">Beyond The Mesh</a>
+      </li>
+      <li class="nav-item">
+        <a href="#hobbies-challenges" class="nav-link">Hobbies</a>
+      </li>
+      <li class="nav-item">
+        <a href="#animeworld" class="nav-link">Anime</a>
+      </li>
+      <li class="nav-item">
+        <a href="#contact" class="nav-link">Contact</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2 data-aos="fade-up">About</h2>
+    <div class="section-desc" data-aos="fade-up" data-aos-delay="100">
+      A quick introduction to my background.
+    </div>
+
+    <div class="about-section">
+      <!-- Who am I Card -->
+      <div class="glass-box about-card" data-aos="zoom-in" data-aos-delay="200">
+        <h3>Who am I?</h3>
+        <img src="assets/imgs/picture.png" alt="Ali Aslan Demir" />
+        <p>
+          I am a PhD candidate working at the interface of Biophysics and
+          Biomineralization at the University of Oslo. My current research
+          focuses on stem cell differentiation, bone formation in hydrogels,
+          and microfluidic technologies. I also investigate cell behavior on
+          micropatterned substrates, with ongoing interest in deep
+          learning-enabled microscopy.
+        </p>
+      </div>
+
+      <!-- Areas of Interest Card -->
+      <div class="glass-box about-card" data-aos="zoom-in" data-aos-delay="400">
+        <h3>Areas of Interest</h3>
+        <p>
+          <strong>Biomineralization:</strong> Investigating calcium phosphate
+          transformations for bone tissue engineering.
+        </p>
+        <p>
+          <strong>Biophysics:</strong> Revealing how mechanical forces &
+          biological cues influence cellular behavior.
+        </p>
+        <p>
+          <strong>Organ-on-a-chip:</strong> Building lab-on-a-chip systems to
+          mimic physiological conditions for tissue engineering.
+        </p>
+        <p>
+          <strong>Deep Learning:</strong> Using AI for data analysis.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume Section -->
+
+    <section id="resume">
+        <h2 data-aos="fade-up">Resume</h2>
+        <div class="section-desc" data-aos="fade-up" data-aos-delay="100">
+        A snapshot of my educational background, research experience, and industry involvement.
+        </div>
     
-    <!-- About Section -->
-    <section id="about" class="about-section" data-aos="fade-up">
-        <!-- Who am I Card -->
-        <div class="about-card" data-aos="zoom-in" data-aos-delay="200">
-            <h3>Who am I?</h3>
-            <img src="assets/imgs/picture.png" alt="Ali Aslan Demir">
-            <p>I am a PhD candidate working in the fields of Biophysics and Biomineralization at the University of Oslo. My research focuses on stem cell differentiation, bone formation in hydrogels, and microfluidic technologies. I also research cell behavior on micropatterned substrates. I am passionate about microscopy, data analysis, and their applications in personalized medicine. Every new discovery feels like solving a puzzle—connecting the dots to understand why we are the way we are, and that curiosity keeps me hooked.</p>
-        </div>
-        
-        <!-- Areas of Interest Card -->
-        <div class="about-card" data-aos="zoom-in" data-aos-delay="400">
-            <h3>Areas of Interest</h3>
-            <p><strong>Biomineralization:</strong> Researching calcium phosphate transformations for bone tissue engineering.</p>
-            <p><strong>Biophysics:</strong> Understanding how mechanical forces and biological interactions influence cellular behavior.</p>
-            <p><strong>Organ-on-a-chip:</strong> Developing systems to mimic cellular environments for tissue engineering research.</p>
-            <p><strong>Deep Learning:</strong> Applying AI models for automated image analysis and data classification.</p>
-        </div>
-    </section>
-
-    <!-- Resume Section -->
-    <section id="resume" data-aos="fade-up">
         <div class="resume-container">
-            <h2 class="mb-5"><span class="text-danger">Resume</span> </h2>
-            <div class="resume-cards">
-                <!-- Education Card -->
-                <div class="resume-card" data-aos="fade-right">
-                    <header class="resume-card-header">
-                        <h4>Education</h4>
-                    </header>
-                    <div class="resume-card-body">
-                        <ul class="resume-list">
-                            <p><strong>PhD in Biophysics:</strong> University of Oslo / NO (Aug 2022 - Present)</p>
-                            <p><strong>MS in Photonics Science and Engineering:</strong> Izmir Institute of Technology / TR (Sep 2018 - Jun 2021)</p>
-                            <p><strong>BS in Physics:</strong> Middle East Technical University / TR (Sep 2012 - Jun 2018)</p>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Research & Expertise Card -->
-                <div class="resume-card resume-card-research" data-aos="fade-up" data-aos-delay="200">
-                    <header class="resume-card-header">
-                        <h4>Research & Expertise</h4>
-                    </header>
-                    <div class="resume-card-body">
-                        <ul class="resume-list">
-                            <li><strong>PhD Candidate | Biophysics and Biomineralization</strong> - University of Oslo (Aug 2022 - Present)
-                                <ul role="list">
-                                    <li>Modeling of biomineralization to understand factors affecting bone regeneration</li>
-                                    <li>Experimental investigation of calcium phosphate biomineralization and interaction of bone/stem cells with the extracellular matrix</li>
-                                    <li>Developing and maintaining automation protocols and ensuring lab safety compliance</li>
-                                </ul>
-                            </li>
-                            <li><strong>Visiting Researcher</strong> - University of Minnesota (Jul 2024 - Aug 2024)
-                                <ul role="list">
-                                    <li>Worked on a Norwegian Centennial Chair (NOCC)-funded project on engineering cell tissue through topological patterning</li>
-                                    <li>Designed and microfabricated topological defect patterns for tissue ordering</li>
-                                    <li>Investigated HUASMC cell mechanics on fibronectin micropatterns using Traction Force Microscopy and PIV analysis</li>
-                                </ul>
-                            </li>
-                            <li><strong>Research Assistant</strong> - İzmir Institute of Technology (Mar 2020 - Aug 2022)
-                                <ul role="list">
-                                    <li>Detection of rare cells using deep learning and lensless holography</li>
-                                    <li>Assisted in the Applied Optics and Photonics Laboratory with a focus on diffraction patterns</li>
-                                </ul>
-                            </li>
-                            <li><strong>Erasmus Intern</strong> - Umeå University (Aug 2019 - Oct 2019)
-                                <ul role="list">
-                                    <li>Characterization and analysis of bacterial p-pili folding-unfolding using Force Measuring Optical Tweezers</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Industry Experience Card -->
-                <div class="resume-card" data-aos="fade-left" data-aos-delay="400">
-                    <header class="resume-card-header">
-                        <h4>Industry Experience</h4>
-                    </header>
-                    <div class="resume-card-body">
-                        <ul class="resume-list">
-                            <li>Collaborated with INITIO CELL on deep learning-enforced image analysis for organ-on-chip applications and developed a GUI interface for data analysis</li>
-                            <li>Interned at Omega Electronics A.S., working on LED luminaire design and testing</li>
-                        </ul>
-                    </div>
+        <div class="resume-cards">
+            <!-- Education Card -->
+            <div
+            class="glass-box"
+            data-aos="fade-right"
+            data-aos-delay="200"
+            style="overflow: hidden"
+            >
+            <div class="resume-card-header">
+                <h4>Education</h4>
+            </div>
+            <div class="resume-card-body">
+                <div class="resume-list" style="display: grid; grid-template-columns: 1fr 2fr; gap: 20px; align-items: start;">
+                <p>
+                    <strong>PhD in Biophysics:</strong><br>
+                    University of Oslo / NO<br>
+                    (Aug 2022 - Present)
+                </p>
+                <p>
+                    <em>Focusing on stem cell differentiation, hydrogels, and microfluidics 
+                    to better understand biomineralization.</em>
+                </p>
+    
+                <p>
+                    <strong>MS in Photonics Science & Engineering:</strong><br>
+                    Izmir Institute of Tech / TR<br>
+                    (2018 - 2021)
+                </p>
+                <p>
+                    <em>Used lensless holography for quantitative phase analysis of cells, 
+                    improving detection and measurement accuracy.</em>
+                </p>
+    
+                <p>
+                    <strong>BS in Physics:</strong><br>
+                    Middle East Technical University / TR<br>
+                    (2012 - 2018)
+                </p>
+                <p>
+                    <em>Graduation project explored the effects of contrast agents in photoacoustic microscopy, 
+                    enhancing imaging clarity.</em>
+                </p>
                 </div>
             </div>
+            </div>
+
+  
+        <!-- Research & Expertise Card -->
+        <div
+          class="glass-box"
+          data-aos="fade-up"
+          data-aos-delay="300"
+          style="overflow: hidden"
+        >
+          <div class="resume-card-header">
+            <h4>Research & Expertise</h4>
+          </div>
+          <div class="resume-card-body">
+            <ul class="resume-list">
+              <li>
+                <strong>PhD Candidate</strong> | Biophysics & Biomineralization
+                (U. of Oslo, 2022 - Present)
+                <ul>
+                  <li>Modeling biomineralization for bone regeneration</li>
+                  <li>
+                    Investigating CaP (calcium phosphate) formation & ECM
+                    interactions
+                  </li>
+                  <li>Automation protocols & lab safety oversight</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Visiting Researcher</strong> (U. of Minnesota, 2024)
+                <ul>
+                  <li>
+                    Engineering cell tissue with topological patterning
+                    (NOCC-funded)
+                  </li>
+                  <li>
+                    Designed & microfabricated topological defect substrates
+                  </li>
+                  <li>
+                    Used Traction Force Microscopy & PIV for cell mechanics
+                    analysis
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <strong>Research Assistant</strong> (Izmir Inst. of
+                Technology, 2020 - 2022)
+                <ul>
+                  <li>
+                    Deep learning-based detection of rare cells via lensless
+                    holography
+                  </li>
+                  <li>
+                    Explored diffraction patterns in the Applied Optics &
+                    Photonics Lab
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <strong>Erasmus Intern</strong> (Umeå University, 2019)
+                <ul>
+                  <li>
+                    Bacterial p-pili folding-unfolding analysis with Optical
+                    Tweezers
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
-    </section>
 
-    <!-- Slides Section -->
-    <section id="slides" class="section" data-aos="fade-up">
-        <h2 class="text-danger">Slides</h2>
-        <p>This page was created with the assumption of regular updates to showcase some of my research activities. Details maybe later; better to ask.</p>
-        <div class="slider-container">
-            <div class="slides">
-                <div class="slide"><img src="assets/imgs/Slide1.png" alt="Slide1"></div>
-                <div class="slide"><img src="assets/imgs/Slide2.png" alt="Slide2"></div>
-                <div class="slide"><img src="assets/imgs/Slide3.png" alt="Slide3"></div>
-                <div class="slide"><img src="assets/imgs/Slide4.png" alt="Slide4"></div>
-                <div class="slide"><img src="assets/imgs/Slide5.png" alt="Slide5"></div>
-            </div>
-            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        <!-- Industry Experience Card -->
+        <div
+          class="glass-box"
+          data-aos="fade-left"
+          data-aos-delay="400"
+          style="overflow: hidden"
+        >
+          <div class="resume-card-header">
+            <h4>Industry Experience</h4>
+          </div>
+          <div class="resume-card-body">
+            <ul class="resume-list">
+              <li>
+                Collaborated with INITIO CELL on deep learning-based image
+                analysis for organ-on-chip research, developing a GUI for data
+                analytics
+              </li>
+              <li>
+                Interned at Omega Electronics A.S. on LED luminaire design &
+                testing
+              </li>
+            </ul>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Beyond the Mesh Section -->
-    <section id="beyond-the-mesh" class="section" data-aos="fade-up">
-        <h2 class="text-danger">Beyond the Mesh</h2>
-        <p>"Beyond the Mesh" explores the unseen truths of science, life, and creativity. These videos unveil stories that challenge perfection and embrace curiosity. Watch the journey unfold below:</p>
-        
-        <div class="youtube-videos">
-            <div class="video" data-aos="zoom-in" data-aos-delay="100">
-                <h4>Video 1: Blessed Be the Light</h4>
-                <iframe width="560" height="315" 
-                        src="https://www.youtube.com/embed/VIDEO_ID_1" 
-                        title="Blessed Be the Light" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen>
-                </iframe>
-            </div>
-            
-            <div class="video" data-aos="zoom-in" data-aos-delay="200">
-                <h4>Video 2: The Invisible Thread</h4>
-                <iframe width="560" height="315" 
-                        src="https://www.youtube.com/embed/VIDEO_ID_2" 
-                        title="The Invisible Thread" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen>
-                </iframe>
-            </div>
-            
-            <div class="video" data-aos="zoom-in" data-aos-delay="300">
-                <h4>Video 3: A Minima</h4>
-                <iframe width="560" height="315" 
-                        src="https://www.youtube.com/embed/VIDEO_ID_3" 
-                        title="A Minima" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen>
-                </iframe>
-            </div>
-            
-            <div class="video" data-aos="zoom-in" data-aos-delay="400">
-                <h4>Video 4: Beneath the Surface</h4>
-                <iframe width="560" height="315" 
-                        src="https://www.youtube.com/embed/VIDEO_ID_4" 
-                        title="Beneath the Surface" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen>
-                </iframe>
-            </div>
-            
-            <div class="video" data-aos="zoom-in" data-aos-delay="500">
-                <h4>Video 5: Immortal Creatures in the Lab</h4>
-                <iframe width="560" height="315" 
-                        src="https://www.youtube.com/embed/VIDEO_ID_5" 
-                        title="Immortal Creatures in the Lab" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen>
-                </iframe>
-            </div>
+  <!-- Slides Section -->
+  <section id="slides">
+    <h2 data-aos="fade-up">Slides</h2>
+    <div class="section-desc" data-aos="fade-up" data-aos-delay="100">
+      A peek at some visuals and data from my ongoing research.
+      Feel free to get in touch for the finer details!
+    </div>
+    <div
+      class="slider-container"
+      data-aos="zoom-in"
+      data-aos-delay="200"
+      style="margin-top: 40px"
+    >
+      <div class="slides">
+        <div class="slide">
+          <img src="assets/imgs/Slide1.png" alt="Slide1" />
         </div>
-    </section>
-
-    <!-- Hobbies and Challenges Section -->
-    <section id="hobbies-challenges" class="section" data-aos="fade-up">
-        <h2 class="text-danger">Hobbies & Challenges</h2>
-        <p>As an amateur sports enthusiast, I've always aimed for small, achievable goals over time. It's all about the climb, one ladder rung at a time!</p>
-        <div class="hobbies-challenges-container">
-            <div class="hobbies-section" data-aos="flip-left" data-aos-delay="200">
-                <h4>Hobbies</h4>
-                <div class="section-content">
-                    <p>Running</p>
-                    <p>Cross Country Skiing</p>
-                    <p>Cycling</p>
-                </div>
-            </div>
-            
-            <div class="challenges-section" data-aos="flip-right" data-aos-delay="400">
-                <h4>Challenges</h4>
-                <div class="section-content">
-                    <p>Birkebeinerrennet</p>
-                    <p>Ultra Trail (&gt;60k)</p>
-                    <p>&gt;160k Cycling</p>
-                    <p>&gt;5000m Climbing</p>
-                </div>
-            </div>
+        <div class="slide">
+          <img src="assets/imgs/Slide2.png" alt="Slide2" />
         </div>
-    </section>
-
-    <!-- Anime World Section -->
-    <section id="animeworld" class="section" data-aos="fade-up">
-        <h2 class="text-danger">My Anime List</h2>
-        <div class="img-holder">
-            <p>I've always been fascinated by the boundless creativity of anime. To escape the more boring parts of life, I sometimes immerse myself in the anime world. The cloud below is a reminder for me, or a suggestion for you to explore.</p>
-            <img src="assets/imgs/worldcloudaad.png" alt="My Anime List Cloud Image" class="center" width="700" height="700">
+        <div class="slide">
+          <img src="assets/imgs/Slide3.png" alt="Slide3" />
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section" data-aos="fade-up">
-        <h2 class="text-danger">Contact</h2>
-        <div class="contact-content">
-            <p>If you would like to get in touch for personal matters, please email me at:</p>
-
-            <a href="mailto:aliaslandemir@gmail.com" target="_blank">
-                <button class="gmail-button">Contact via Gmail</button>
-            </a>
-            
-            <p class="spacer"></p>
-            
-            <p>If you would like to discuss professional opportunities, feel free to reach out at:</p>
-            <a href="mailto:aliadem@uio.no" target="_blank">
-                <button class="outlook-button">Contact via Outlook</button>
-            </a>
-            
-            <p class="spacer"><strong>...</strong></p>
-            
-            <p>You can also connect with me on LinkedIn:</p>
-            <a href="https://www.linkedin.com/in/aliaslandemir/" target="_blank">
-                <button class="linkedin-button">Visit my LinkedIn Profile</button>
-            </a>
-            
-            <p class="spacer"><strong>...</strong></p>
-
-            <p>The image below is from a real advertisement board picture that remained unchanged around 10 years of my lifetime span; never updated, yet still there, as if it holds hope that someone will eventually look at it/change it. Translation: (Buraya Bakarlar - They'll Take Notice Here).</p>
-            <div class="img-holder">
-                <img src="assets/imgs/bakarlar.webp" alt="Contact Image" class="contact-image">
-                <p class="funny-text">Okay, folks, I think I've hit my seriousness quota. Life's like a good book — just think about the moments in between. Remember to embrace your definitive derivative!</p>
-            </div>
+        <div class="slide">
+          <img src="assets/imgs/Slide4.png" alt="Slide4" />
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer" data-aos="fade-up">
-        <div class="container">
-            <p>&copy; 2024; Ali Aslan Demir.</p>
+        <div class="slide">
+          <img src="assets/imgs/Slide5.png" alt="Slide5" />
         </div>
-    </footer>
+      </div>
+      <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+  </section>
 
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-    <script src="assets/js/main.js"></script>
+  <!-- Beyond the Mesh Section -->
+  <section id="beyond-the-mesh">
+    <h2 data-aos="fade-up">Beyond The Mesh</h2>
+    <div class="section-desc" data-aos="fade-up" data-aos-delay="100">
+      "Beyond the Mesh" reveals unseen truths of science, life, and creativity. Each video seeks to embrace curiosity and challenge perfection.
+    </div>
+  
+    <div class="youtube-videos" data-aos="fade-up" data-aos-delay="200">
+      <!-- Video 1 -->
+      <div class="video" data-aos="zoom-in" data-aos-delay="100">
+        <h4>Blessed Be the Light</h4>
+        <iframe
+          src="https://www.youtube.com/embed/HZlaqq6M1SE"
+          title="Blessed Be the Light"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+  
+      <!-- Video 2 -->
+      <div class="video" data-aos="zoom-in" data-aos-delay="200">
+        <h4>The Invisible Thread</h4>
+        <iframe
+          src="https://www.youtube.com/embed/VIDEO_ID_2"
+          title="The Invisible Thread"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+  
+      <!-- Video 3 -->
+      <div class="video" data-aos="zoom-in" data-aos-delay="300">
+        <h4>A Minima</h4>
+        <iframe
+          src="https://www.youtube.com/embed/VIDEO_ID_3"
+          title="A Minima"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+  
+      <!-- Video 4 -->
+      <div class="video" data-aos="zoom-in" data-aos-delay="400">
+        <h4>Beneath the Surface</h4>
+        <iframe
+          src="https://www.youtube.com/embed/VIDEO_ID_4"
+          title="Beneath the Surface"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+  
+      <!-- Video 5 -->
+      <div class="video" data-aos="zoom-in" data-aos-delay="500">
+        <h4>Immortal Creatures in the Lab</h4>
+        <iframe
+          src="https://www.youtube.com/embed/VIDEO_ID_5"
+          title="Immortal Creatures in the Lab"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </section>
+  
 
-    <!-- Slide Navigation Script -->
-    <script>
-        let currentSlide = 0;
-        function moveSlide(direction) {
-            const slides = document.querySelector('.slides');
-            const totalSlides = document.querySelectorAll('.slide').length;
-            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
-            slides.style.transform = `translateX(${-currentSlide * 100}%)`;
-        }
-    </script>
+  <!-- Hobbies & Challenges Section -->
+  <section id="hobbies-challenges">
+    <h2 data-aos="fade-up">Hobbies & Challenges</h2>
+    <div class="section-desc" data-aos="fade-up" data-aos-delay="100">
+      Small steps over time lead to great achievements. It's the journey, not
+      just the summit!
+    </div>
+
+    <div class="hc-container">
+      <div class="hc-card" data-aos="flip-left" data-aos-delay="200">
+        <h4>Hobbies</h4>
+        <p>Running</p>
+        <p>Cross Country Skiing</p>
+        <p>Cycling</p>
+      </div>
+
+      <div class="hc-card" data-aos="flip-right" data-aos-delay="400">
+        <h4>Challenges</h4>
+        <p>Birkebeinerrennet</p>
+        <p>Ultra Trail (&gt;60k)</p>
+        <p>&gt;160k Cycling</p>
+        <p>&gt;5000m Climbing</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Anime World Section -->
+  <section id="animeworld">
+    <h2 data-aos="fade-up">My Anime List</h2>
+    <div class="section-desc" data-aos="fade-up" data-aos-delay="100">
+      A lighthearted escape from everyday life.
+    </div>
+
+    <div class="anime-content" data-aos="fade-up" data-aos-delay="200">
+      <p>
+        I’ve always been fascinated by the creativity in anime.
+        Here’s a “cloud”; a reminder for me/you.
+      </p>
+      <img
+        src="assets/imgs/worldcloudaad.png"
+        alt="My Anime List Cloud Image"
+        width="700"
+        height="700"
+      />
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2 data-aos="fade-up">Contact</h2>
+    <div class="section-desc" data-aos="fade-up" data-aos-delay="100">
+      Let’s connect! Feel free to reach out for personal, professional, or
+      curious inquiries.
+    </div>
+
+    <div class="contact-content">
+      <p data-aos="fade-up" data-aos-delay="200">Personal inquiries:</p>
+      <a href="mailto:aliaslandemir@gmail.com" target="_blank">
+        <button class="contact-btn" data-aos="fade-up" data-aos-delay="300">
+          Gmail
+        </button>
+      </a>
+
+      <p data-aos="fade-up" data-aos-delay="400">Professional opportunities:</p>
+      <a href="mailto:aliadem@uio.no" target="_blank">
+        <button class="contact-btn" data-aos="fade-up" data-aos-delay="500">
+          Outlook
+        </button>
+      </a>
+
+      <p data-aos="fade-up" data-aos-delay="600">Connect with me on LinkedIn:</p>
+      <a href="https://www.linkedin.com/in/aliaslandemir/" target="_blank">
+        <button class="contact-btn" data-aos="fade-up" data-aos-delay="700">
+          LinkedIn
+        </button>
+      </a>
+
+      <p class="funny-text" data-aos="fade-up" data-aos-delay="800">
+        The image below is from a real advertisement board that remained unchanged
+        for about 10 years, quietly waiting for someone to notice or update it.
+        (“Buraya Bakarlar” translates to “They’ll Take Notice Here.”)
+      </p>
+      <img
+        src="assets/imgs/bakarlar.webp"
+        alt="Contact Image"
+        class="contact-image"
+        data-aos="zoom-in"
+        data-aos-delay="900"
+      />
+
+      <p class="funny-text" style="margin-top: 60px; text-align: center; font-size: 1.1rem; opacity: 0.85;">
+        Life’s like a great book; don’t forget to appreciate the pages in between. Embrace your definitive derivative!
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" data-aos="fade-up">
+    <p>&copy; 2025 Ali Aslan Demir. All rights reserved.</p>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollTopBtn" class="ti-arrow-up"></button>
+
+  <!-- Scripts -->
+  <script
+    src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    AOS.init();
+
+    // Slide Navigation
+    let currentSlide = 0;
+    function moveSlide(direction) {
+      const slides = document.querySelector(".slides");
+      const totalSlides = document.querySelectorAll(".slide").length;
+      currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+      slides.style.transform = `translateX(${-currentSlide * 100}%)`;
+    }
+
+    // Scroll to Top
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+    window.onscroll = function () {
+      if (
+        document.body.scrollTop > 200 ||
+        document.documentElement.scrollTop > 200
+      ) {
+        scrollTopBtn.style.display = "block";
+      } else {
+        scrollTopBtn.style.display = "none";
+      }
+    };
+    scrollTopBtn.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
 </body>
 </html>

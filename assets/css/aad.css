@@ -438,11 +438,12 @@ button:hover {
 /* Funny Text Animation */
 .funny-text {
   font-size: 1.5rem;
-  color: #FF5733;
   text-align: center;
-  animation: bounce 2s infinite ease-in-out, color-change 5s infinite;
-  transform-origin: center;
   font-family: 'Poppins', sans-serif;
+  color: #FF5733; /* Starting color */
+  animation: bounce 2s infinite ease-in-out, color-change 5s infinite;
+  display: inline-block;
+  margin: 60px 0; /* Space above and below */
 }
 
 @keyframes bounce {
@@ -452,11 +453,13 @@ button:hover {
 }
 
 @keyframes color-change {
-  0%, 100% { color: #5DADE2; }
-  25% { color: #2980B9; }
-  50% { color: #1ABC9C; }
-  75% { color: #2C3E50; }
+  0%, 100% { color: #FF5733; }
+  25% { color: #1ABC9C; }
+  50% { color: #2980B9; }
+  75% { color: #8E44AD; }
 }
+
+
 
 /* Media Queries */
 @media (max-width: 768px) {
