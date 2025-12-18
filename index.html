@@ -1,418 +1,383 @@
 <!DOCTYPE html>
-<html lang="en" data-aos-easing="ease-out" data-aos-duration="800" data-aos-delay="0">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="author" content="aad" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <title>Ali Aslan Demir | Portfolio</title>
-  
-  <!-- External CSS / Icons -->
-  <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <meta name="author" content="Ali Aslan Demir" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ali Aslan Demir | Research Portfolio</title>
 
-  <!-- Custom CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
   <link rel="stylesheet" href="assets/css/aad.css" />
 </head>
 
 <body>
-  <!-- ========== PRELOADER ========== -->
-  <div id="preloader">
-    <div class="spinner"></div>
-  </div>
+  <nav class="site-nav">
+    <a class="brand" href="#home">AAD</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#experience">Experience</a>
+      <a href="#visuals">Visuals</a>
+      <a href="#creative">Creative</a>
+      <a href="#interests">Interests</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
-  <!-- ========== HEADER SECTION ========== -->
-  <header class="header" id="home" data-aos="fade-in">
-    <div class="header-content">
-      <h4 class="header-subtitle" data-aos="fade-in" data-aos-delay="400">
-        Welcome, I'm
-      </h4>
-      <h1 class="header-title" data-aos="fade-up" data-aos-delay="600" id="typed-name">
-        <!-- Placeholder for typed effect (if desired) -->
-        Ali Aslan Demir
-      </h1>
+  <header class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="hero-text" data-aos="fade-up">
+        <p class="eyebrow">PhD candidate in Biophysics &amp; Biomineralization</p>
+        <h1>Ali Aslan Demir</h1>
+        <p class="lead">
+          I work at the interface of biophysics, biomineralization, and microfluidics, with a focus
+          on stem cell differentiation, bone formation in hydrogels, and microscopy-driven insights.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#contact">Contact</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/aliaslandemir/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+        <div class="hero-highlights">
+          <div>
+            <span class="label">Affiliation</span>
+            <span>University of Oslo</span>
+          </div>
+          <div>
+            <span class="label">Focus</span>
+            <span>Biomineralization, mechanobiology, organ-on-a-chip</span>
+          </div>
+          <div>
+            <span class="label">Methods</span>
+            <span>Microfluidics, microscopy, deep learning, traction force analysis</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual" data-aos="fade-left">
+        <img src="assets/imgs/aad_portfolio.png" alt="Ali Aslan Demir portrait" />
+        <div class="hero-card">
+          <h3>Current Research</h3>
+          <ul>
+            <li>Stem cell differentiation in engineered hydrogels</li>
+            <li>Calcium phosphate formation and ECM interactions</li>
+            <li>Microfabricated substrates for cell mechanics</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </header>
 
-  <!-- ========== NAVBAR ========== -->
-  <nav class="navbar navbar-expand-lg" data-aos="fade-down" data-aos-duration="1000">
-    <ul class="navbar-nav mx-auto">
-      <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-      <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-      <li class="nav-item"><a href="#resume" class="nav-link">Resume</a></li>
-      <li class="nav-item"><a href="#slides" class="nav-link">Slides</a></li>
-      <li class="nav-item"><a href="#beyond-the-mesh" class="nav-link">Beyond The Mesh</a></li>
-      <li class="nav-item"><a href="#hobbies-challenges" class="nav-link">Hobbies</a></li>
-      <li class="nav-item"><a href="#animeworld" class="nav-link">Anime</a></li>
-      <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- ========== ABOUT SECTION ========== -->
-  <section id="about">
-    <h2 data-aos="fade-up">About</h2>
-    <div class="section-desc" data-aos="fade-up" data-aos-delay="100">
-      A quick introduction to my background.
-    </div>
-
-    <div class="about-section">
-      <!-- Who am I Card -->
-      <div class="glass-box about-card" data-aos="zoom-in" data-aos-delay="200">
-        <h3>Who am I?</h3>
-        <img src="assets/imgs/aad_portfolio.gif" alt="Ali Aslan Demir" />
-        <p>
-          I am a PhD candidate working at the interface of Biophysics and
-          Biomineralization at the University of Oslo. My current research
-          focuses on stem cell differentiation, bone formation in hydrogels,
-          and microfluidic technologies. I also investigate cell behavior on
-          micropatterned substrates and have an interest in deep
-          learning–assisted data analysis in microscopy.
-        </p>
-      </div>
-
-      <!-- Areas of Interest Card -->
-      <div class="glass-box about-card" data-aos="zoom-in" data-aos-delay="400">
-        <h3>Areas of Interest</h3>
-        <p><strong>Biomineralization:</strong> Investigating calcium phosphate transformations for bone tissue engineering.</p>
-        <p><strong>Biophysics:</strong> Investigating how mechanical forces &amp; biological cues influence cellular behavior.</p>
-        <p><strong>Organ-on-a-chip:</strong> Using lab-on-a-chip systems to mimic physiological conditions for tissue engineering.</p>
-        <p><strong>Deep Learning:</strong> Leveraging AI for image analysis & data analytics.</p>
-        <p><strong>Generative AI:</strong> Exploring LLMs in scientific communication.</p>
-        <p><strong>Sports Data Analysis:</strong> Fun side activity to improve performance metrics.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== RESUME SECTION ========== -->
-  <section id="resume">
-    <h2 data-aos="fade-up">Resume</h2>
-    <div class="section-desc" data-aos="fade-up" data-aos-delay="100">
-      A snapshot of my educational background, research experience, and industry experience.
-    </div>
-
-    <div class="resume-container">
-      <div class="resume-cards">
-        <!-- Education Card -->
-        <div class="glass-box" data-aos="fade-right" data-aos-delay="200" style="overflow: hidden">
-          <div class="resume-card-header">
-            <h4>Education</h4>
+  <main>
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h2>About</h2>
+          <p>A concise overview of my background and research direction.</p>
+        </div>
+        <div class="grid-2">
+          <div class="card" data-aos="fade-up" data-aos-delay="100">
+            <h3>Profile</h3>
+            <p>
+              I am a PhD candidate working at the interface of biophysics and biomineralization.
+              My research explores stem cell differentiation, bone formation in hydrogels, and
+              microfluidic technologies. I also study cell behavior on micropatterned substrates and
+              apply deep learning to microscopy-driven data analysis.
+            </p>
           </div>
-          <div class="resume-card-body">
-            <div class="resume-list" style="display: grid; grid-template-columns: 1fr 2fr; gap: 20px; align-items: start;">
-              <p>
-                <strong>PhD in Biophysics:</strong><br>
-                University of Oslo / NO<br>
-                (Aug 2022 - Present)
-              </p>
-              <p>
-                <em>Focusing on stem cell differentiation, hydrogels, and microfluidics 
-                   to better understand biomineralization.</em>
-              </p>
-
-              <p>
-                <strong>MS in Photonics Science &amp; Engineering:</strong><br>
-                Izmir Institute of Tech / TR<br>
-                (2018 - 2021)
-              </p>
-              <p>
-                <em>Lensless holography for quantitative phase analysis of cells, 
-                   deep learning for differentiating cancer cell lines, improved image analysis accuracy.</em>
-              </p>
-
-              <p>
-                <strong>BS in Physics:</strong><br>
-                Middle East Technical University / TR<br>
-                (2012 - 2018)
-              </p>
-              <p>
-                <em>Graduation project explored the effects of contrast agents in photoacoustic microscopy.</em>
-              </p>
+          <div class="card" data-aos="fade-up" data-aos-delay="200">
+            <h3>Research Focus</h3>
+            <div class="pill-list">
+              <span>Biomineralization</span>
+              <span>Biophysics</span>
+              <span>Organ-on-a-chip</span>
+              <span>Deep learning</span>
+              <span>Generative AI</span>
+              <span>Sports data analysis</span>
             </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Research & Expertise Card -->
-        <div class="glass-box" data-aos="fade-up" data-aos-delay="300" style="overflow: hidden">
-          <div class="resume-card-header">
-            <h4>Research &amp; Expertise</h4>
+    <section id="research" class="section alt">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h2>Research Themes</h2>
+          <p>Where I spend my time in the lab and in front of the microscope.</p>
+        </div>
+        <div class="grid-3">
+          <div class="card" data-aos="fade-up" data-aos-delay="100">
+            <h3>Biomineralization</h3>
+            <p>Calcium phosphate transformations and hydrogel-based bone regeneration models.</p>
           </div>
-          <div class="resume-card-body">
-            <ul class="resume-list">
-              <li>
-                <strong>PhD Candidate</strong> | Biophysics &amp; Biomineralization (U. of Oslo, 2022 - Present)
+          <div class="card" data-aos="fade-up" data-aos-delay="200">
+            <h3>Cell Mechanics</h3>
+            <p>Micropatterned substrates, traction force microscopy, and PIV-based analysis.</p>
+          </div>
+          <div class="card" data-aos="fade-up" data-aos-delay="300">
+            <h3>Computational Imaging</h3>
+            <p>Deep learning and quantitative phase analysis for improved microscopy insights.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h2>Experience</h2>
+          <p>Academic research roles and industry collaborations.</p>
+        </div>
+        <div class="grid-3">
+          <div class="card" data-aos="fade-up" data-aos-delay="100">
+            <h3>Research</h3>
+            <div class="timeline">
+              <div>
+                <h4>PhD Candidate</h4>
+                <p class="meta">University of Oslo | 2022 - Present</p>
                 <ul>
                   <li>Modeling biomineralization for bone regeneration</li>
-                  <li>Investigating CaP formation &amp; ECM interactions</li>
-                  <li>Automation protocols &amp; lab safety</li>
+                  <li>Investigating CaP formation and ECM interactions</li>
+                  <li>Automation protocols and lab safety</li>
                 </ul>
-              </li>
-              <li>
-                <strong>Visiting Researcher</strong> (U. of Minnesota, 2024)
+              </div>
+              <div>
+                <h4>Visiting Researcher</h4>
+                <p class="meta">University of Minnesota | 2024</p>
                 <ul>
-                  <li>Engineering cell tissue with topological patterning (NOCC-funded)</li>
-                  <li>Designed &amp; microfabricated topological defect substrates</li>
-                  <li>Used traction force microscopy &amp; PIV for cell mechanics analysis</li>
+                  <li>Topological patterning for engineered cell tissue (NOCC-funded)</li>
+                  <li>Designed and microfabricated topological defect substrates</li>
+                  <li>Traction force microscopy and PIV analysis</li>
                 </ul>
-              </li>
-              <li>
-                <strong>Research Assistant</strong> (Izmir Inst. of Technology, 2020 - 2022)
+              </div>
+              <div>
+                <h4>Research Assistant</h4>
+                <p class="meta">Izmir Institute of Technology | 2020 - 2022</p>
                 <ul>
                   <li>Deep learning-based detection of rare cells via lensless holography</li>
                   <li>Explored diffraction patterns in the Applied Optics &amp; Photonics Lab</li>
                 </ul>
-              </li>
-              <li>
-                <strong>Erasmus Intern</strong> (Umeå University, 2019)
+              </div>
+              <div>
+                <h4>Erasmus Intern</h4>
+                <p class="meta">Umea University | 2019</p>
                 <ul>
-                  <li>Bacterial p-pili folding-unfolding analysis with Force Measuring Optical Tweezers</li>
+                  <li>Bacterial p-pili folding-unfolding analysis with optical tweezers</li>
                 </ul>
-              </li>
+              </div>
+            </div>
+          </div>
+          <div class="card" data-aos="fade-up" data-aos-delay="200">
+            <h3>Education</h3>
+            <div class="timeline">
+              <div>
+                <h4>PhD in Biophysics</h4>
+                <p class="meta">University of Oslo | 2022 - Present</p>
+                <p>Stem cell differentiation, hydrogels, and microfluidics.</p>
+              </div>
+              <div>
+                <h4>MS in Photonics Science &amp; Engineering</h4>
+                <p class="meta">Izmir Institute of Technology | 2018 - 2021</p>
+                <p>Lensless holography and deep learning for cell line differentiation.</p>
+              </div>
+              <div>
+                <h4>BS in Physics</h4>
+                <p class="meta">Middle East Technical University | 2012 - 2018</p>
+                <p>Graduation project on contrast agents in photoacoustic microscopy.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card" data-aos="fade-up" data-aos-delay="300">
+            <h3>Industry</h3>
+            <ul class="simple-list">
+              <li>INITIO CELL: deep learning-based image analysis and a GUI for organ-on-chip data.</li>
+              <li>Omega Electronics A.S.: LED luminaire design and testing.</li>
             </ul>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Industry Experience Card -->
-        <div class="glass-box" data-aos="fade-left" data-aos-delay="400" style="overflow: hidden">
-          <div class="resume-card-header">
-            <h4>Industry Experience</h4>
+    <section id="visuals" class="section alt">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h2>Research Visuals</h2>
+          <p>A curated selection of slides from ongoing projects.</p>
+        </div>
+        <div class="gallery" data-aos="fade-up" data-aos-delay="100">
+          <img src="assets/imgs/Slide1.png" alt="Research slide 1" />
+          <img src="assets/imgs/Slide2.png" alt="Research slide 2" />
+          <img src="assets/imgs/Slide3.png" alt="Research slide 3" />
+          <img src="assets/imgs/Slide4.png" alt="Research slide 4" />
+          <img src="assets/imgs/Slide5.png" alt="Research slide 5" />
+          <img src="assets/imgs/Slide6.png" alt="Research slide 6" />
+          <img src="assets/imgs/Slide7.png" alt="Research slide 7" />
+          <img src="assets/imgs/Slide8.png" alt="Research slide 8" />
+          <img src="assets/imgs/Slide9.png" alt="Research slide 9" />
+        </div>
+      </div>
+    </section>
+
+    <section id="creative" class="section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h2>Beyond the Mesh</h2>
+          <p>Personal films that explore science, life, and creativity.</p>
+        </div>
+        <div class="video-grid">
+          <div class="video-card" data-aos="zoom-in" data-aos-delay="100">
+            <h4>Blessed Be the Light</h4>
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/HZlaqq6M1SE?rel=0&modestbranding=1"
+              title="Blessed Be the Light"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
           </div>
-          <div class="resume-card-body">
-            <ul class="resume-list">
-              <li>
-                Collaborated with INITIO CELL on deep learning-based image analysis for organ-on-chip research; developed a GUI for data analytics.
-              </li>
-              <li>
-                Interned at Omega Electronics A.S. on LED luminaire design &amp; testing.
-              </li>
-            </ul>
+          <div class="video-card" data-aos="zoom-in" data-aos-delay="200">
+            <h4>The Invisible Thread</h4>
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/aH8UtMKCsgo?rel=0&modestbranding=1"
+              title="The Invisible Thread"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="video-card" data-aos="zoom-in" data-aos-delay="300">
+            <h4>Universe Within</h4>
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/SH8DibesB2o?rel=0&modestbranding=1"
+              title="Universe Within"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="video-card" data-aos="zoom-in" data-aos-delay="400">
+            <h4>Veins of Eternity</h4>
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/YYxXh8IbxAA?rel=0&modestbranding=1"
+              title="Veins of Eternity"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="video-card" data-aos="zoom-in" data-aos-delay="500">
+            <h4>Souls in Motion</h4>
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/lPxrALlybUg?rel=0&modestbranding=1"
+              title="Souls in Motion"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="video-card" data-aos="zoom-in" data-aos-delay="600">
+            <h4>Architect of Vision</h4>
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/RuKjzySYkls?rel=0&modestbranding=1"
+              title="Architect of Vision"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="video-card placeholder" data-aos="zoom-in" data-aos-delay="700">
+            <h4>In Progress</h4>
+            <p>New episode coming soon.</p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ========== SLIDES SECTION ========== -->
-  <section id="slides">
-    <h2 data-aos="fade-up">Slides</h2>
-    <div class="section-desc" data-aos="fade-up" data-aos-delay="100">
-      A peek at some visuals and data from my ongoing research.
-      Feel free to get in touch for details!
-    </div>
-    <div class="slider-container" data-aos="zoom-in" data-aos-delay="200" style="margin-top: 40px">
-      <div class="slides">
-        <div class="slide"><img src="assets/imgs/Slide1.png" alt="Slide1"></div>
-        <div class="slide"><img src="assets/imgs/Slide2.png" alt="Slide2"></div>
-        <div class="slide"><img src="assets/imgs/Slide3.png" alt="Slide3"></div>
-        <div class="slide"><img src="assets/imgs/Slide4.png" alt="Slide4"></div>
-        <div class="slide"><img src="assets/imgs/Slide5.png" alt="Slide5"></div>
-        <div class="slide"><img src="assets/imgs/Slide6.png" alt="Slide6"></div>
-        <div class="slide"><img src="assets/imgs/Slide7.png" alt="Slide7"></div>
-        <div class="slide"><img src="assets/imgs/Slide8.png" alt="Slide8"></div>
-        <div class="slide"><img src="assets/imgs/Slide9.png" alt="Slide9"></div>
+    <section id="interests" class="section alt">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h2>Personal Interests</h2>
+          <p>Endurance, curiosity, and the visual culture that fuels my creativity.</p>
+        </div>
+        <div class="grid-2">
+          <div class="card" data-aos="fade-up" data-aos-delay="100">
+            <h3>Endurance &amp; Challenges</h3>
+            <div class="split-list">
+              <div>
+                <h4>Hobbies</h4>
+                <ul>
+                  <li>Running</li>
+                  <li>Cross-country skiing</li>
+                  <li>Cycling</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Challenges</h4>
+                <ul>
+                  <li>Birkebeinerrennet</li>
+                  <li>Ultra trail &gt;60k</li>
+                  <li>&gt;160k cycling</li>
+                  <li>&gt;5000m climbing</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card" data-aos="fade-up" data-aos-delay="200">
+            <h3>Anime Cloud</h3>
+            <p>
+              A lighthearted escape from everyday life and a reminder of the stories that shaped my
+              visual imagination.
+            </p>
+            <img src="assets/imgs/worldcloudaad.png" alt="Anime list cloud" />
+          </div>
+        </div>
       </div>
-      <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-      <button class="next" onclick="moveSlide(1)">&#10095;</button>
-    </div>
-  </section>
+    </section>
 
-  <!-- ========== BEYOND THE MESH SECTION ========== -->
-  <section id="beyond-the-mesh">
-    <h2 data-aos="fade-up">Beyond The Mesh</h2>
-    <div class="section-desc" data-aos="fade-up" data-aos-delay="100">
-      "Beyond the Mesh" reveals unseen truths of science, life, and creativity.
-      Each video seeks to embrace curiosity and challenge perfection.
-    </div>
-
-    <div class="youtube-videos" data-aos="fade-up" data-aos-delay="200">
-      <!-- Video 1 -->
-      <div class="video" data-aos="zoom-in" data-aos-delay="100">
-        <h4>Blessed Be the Light</h4>
-        <iframe
-          src="https://www.youtube.com/embed/HZlaqq6M1SE"
-          title="Blessed Be the Light"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h2>Contact</h2>
+          <p>Open to collaborations, research exchanges, and professional opportunities.</p>
+        </div>
+        <div class="contact-grid">
+          <a class="contact-card" href="mailto:aliaslandemir@gmail.com" data-aos="fade-up" data-aos-delay="100">
+            <h3>Personal Email</h3>
+            <p>aliaslandemir@gmail.com</p>
+          </a>
+          <a class="contact-card" href="mailto:aliadem@uio.no" data-aos="fade-up" data-aos-delay="200">
+            <h3>University Email</h3>
+            <p>aliadem@uio.no</p>
+          </a>
+          <a class="contact-card" href="https://www.linkedin.com/in/aliaslandemir/" target="_blank" rel="noopener" data-aos="fade-up" data-aos-delay="300">
+            <h3>LinkedIn</h3>
+            <p>Professional profile</p>
+          </a>
+        </div>
+        <div class="contact-note" data-aos="fade-up" data-aos-delay="400">
+          <p>
+            The image below is from a real advertisement board that remained unchanged for about 10 years,
+            quietly waiting for someone to notice or update it. ("Buraya Bakarlar" translates to
+            "They'll Take Notice Here.")
+          </p>
+          <img src="assets/imgs/bakarlar.webp" alt="Advertisement board" />
+        </div>
       </div>
+    </section>
+  </main>
 
-      <!-- Video 2 -->
-      <div class="video" data-aos="zoom-in" data-aos-delay="200">
-        <h4>The Invisible Thread</h4>
-        <iframe
-          src="https://www.youtube.com/embed/aH8UtMKCsgo"
-          title="The Invisible Thread"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
-
-      <!-- Video 3 -->
-      <div class="video" data-aos="zoom-in" data-aos-delay="300">
-        <h4>Universe Within</h4>
-        <iframe
-          src="https://youtube.com/embed/SH8DibesB2o"
-          title="Universe Within"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
-
-      <!-- Video 4 -->
-      <div class="video" data-aos="zoom-in" data-aos-delay="400">
-        <h4>Veins of Eternity</h4>
-        <iframe
-          src="https://youtube.com/embed/YYxXh8IbxAA"
-          title="Veins of Eternity"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
-
-      <!-- Video 5 -->
-      <div class="video" data-aos="zoom-in" data-aos-delay="500">
-        <h4>Souls in Motion</h4>
-        <iframe
-          src="https://www.youtube.com/embed/lPxrALlybUg"
-          title="Souls in Motion"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
-
-      <!-- Video 6 -->
-      <div class="video" data-aos="zoom-in" data-aos-delay="500">
-        <h4>Architect of Vision</h4>
-        <iframe
-          src="https://www.youtube.com/embed/RuKjzySYkls"
-          title="In progress"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
-
-
-      <!-- Video  -->
-      <div class="video" data-aos="zoom-in" data-aos-delay="500">
-        <h4>In progress</h4>
-        <iframe
-          src="https://www.youtube.com/embed/Video7"
-          title="In progress"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== HOBBIES & CHALLENGES SECTION ========== -->
-  <section id="hobbies-challenges">
-    <h2 data-aos="fade-up">Hobbies &amp; Challenges</h2>
-    <div class="section-desc" data-aos="fade-up" data-aos-delay="100">
-      Small steps over time lead to great achievements. It's the journey, not just the summit!
-    </div>
-
-    <div class="hc-container">
-      <div class="hc-card" data-aos="flip-left" data-aos-delay="200">
-        <h4>Hobbies</h4>
-        <p>Running</p>
-        <p>Cross-Country Skiing</p>
-        <p>Cycling</p>
-      </div>
-      <div class="hc-card" data-aos="flip-right" data-aos-delay="400">
-        <h4>Challenges</h4>
-        <p>Birkebeinerrennet</p>
-        <p>Ultra Trail &gt;60k</p>
-        <p>&gt;160k Cycling</p>
-        <p>&gt;5000m Climbing</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== ANIME WORLD SECTION ========== -->
-  <section id="animeworld">
-    <h2 data-aos="fade-up">My Anime List</h2>
-    <div class="section-desc" data-aos="fade-up" data-aos-delay="100">
-      A lighthearted escape from everyday life.
-    </div>
-
-    <div class="anime-content" data-aos="fade-up" data-aos-delay="200">
-      <p>
-        I’ve always been fascinated by the creativity in anime.
-        Here’s a “cloud”; a reminder for me/you.
-      </p>
-      <img
-        src="assets/imgs/worldcloudaad.png"
-        alt="My Anime List Cloud"
-        width="700"
-        height="700"
-      />
-    </div>
-  </section>
-
-  <!-- ========== CONTACT SECTION ========== -->
-  <section id="contact">
-    <h2 data-aos="fade-up">Contact</h2>
-    <div class="section-desc" data-aos="fade-up" data-aos-delay="100">
-      Let’s connect! Feel free to reach out for personal, professional, or curious inquiries.
-    </div>
-
-    <div class="contact-content">
-      <p data-aos="fade-up" data-aos-delay="200">Personal inquiries:</p>
-      <a href="mailto:aliaslandemir@gmail.com" target="_blank">
-        <button class="contact-btn" data-aos="fade-up" data-aos-delay="300">Gmail</button>
-      </a>
-
-      <p data-aos="fade-up" data-aos-delay="400">Professional opportunities:</p>
-      <a href="mailto:aliadem@uio.no" target="_blank">
-        <button class="contact-btn" data-aos="fade-up" data-aos-delay="500">Outlook</button>
-      </a>
-
-      <p data-aos="fade-up" data-aos-delay="600">Connect with me on LinkedIn:</p>
-      <a href="https://www.linkedin.com/in/aliaslandemir/" target="_blank">
-        <button class="contact-btn" data-aos="fade-up" data-aos-delay="700">LinkedIn</button>
-      </a>
-
-      <p class="funny-text" data-aos="fade-up" data-aos-delay="800">
-        The image below is from a real advertisement board that remained unchanged
-        for about 10 years, quietly waiting for someone to notice or update it.
-        (“Buraya Bakarlar” translates to “They’ll Take Notice Here.”)
-      </p>
-      <img
-        src="assets/imgs/bakarlar.webp"
-        alt="Contact Image"
-        class="contact-image"
-        data-aos="zoom-in"
-        data-aos-delay="900"
-      />
-
-      <p class="funny-text" style="margin-top: 60px; text-align: center; font-size: 1.1rem; opacity: 0.85;">
-        Life’s like a great book; don’t forget to appreciate the pages in between.
-        Embrace your definitive derivative!
-      </p>
-    </div>
-  </section>
-
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer" data-aos="fade-up">
-    <p>&copy; 2025 Ali Aslan Demir. No rights exists here.</p>
+  <footer class="footer">
+    <p>&copy; 2025 Ali Aslan Demir. All rights reserved.</p>
   </footer>
 
-  <!-- ========== SCROLL TO TOP BUTTON ========== -->
-  <button id="scrollTopBtn" class="ti-arrow-up"></button>
+  <button id="scrollTopBtn" aria-label="Scroll to top">&#8593;</button>
 
-  <!-- ========== SCRIPTS ========== -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" crossorigin="anonymous"></script>
-  <!-- Custom JS -->
   <script src="assets/js/main.js"></script>
 </body>
 </html>
